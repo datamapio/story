@@ -82,8 +82,42 @@ As the REF file contains not only the id, but also the state or county name, it 
 
 ##Stacking data frames, one on top of the other (vertical)
 ```
-two_dfs <- rbind(df_A, df_B)
+AB_dfs <- rbind(df_A, df_B)
 ```
+
+
+##Deleting, selecting, adding, renaming
+
+###Deleting & selecting columns
+dplyr: Select columns with select()   
+
+There are a number of helper functions you can use within select(), like starts_with(), ends_with(), matches() and contains(). These let you quickly match larger blocks of variables that meet some criterion. See ?select for more details.
+
+```
+library(dplyr)
+
+## Select columns by name
+new_df <- select(df, column1, column2, column3, column5, column7, column10)
+
+## Select all columns between column1 and column10 (inclusive)
+new_df <- select(df, column1:column10)
+
+## Select all columns except those from column1 to column3 (inclusive)
+select(flights, -(column1:column3))
+
+```
+Delete a column with <- NULL
+```
+df$column5 <- NULL
+```
+Or select columns by their position
+```
+## only keep columns1 to column3, column5 to column6 and column10
+df_new <- df[ , c(1:3,5:6,10)]
+```
+
+###Deleting & selecting rows
+
 
 
 
