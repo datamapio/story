@@ -103,7 +103,7 @@ new_df <- select(df, column1, column2, column3, column5, column7, column10)
 new_df <- select(df, column1:column10)
 
 ## Select all columns except those from column1 to column3 (inclusive)
-select(flights, -(column1:column3))
+new_df <- select(flights, -(column1:column3))
 
 ```
 Delete a column with <- NULL
@@ -117,6 +117,10 @@ df_new <- df[ , c(1:3,5:6,10)]
 ```
 
 ###Deleting & selecting rows
+TO BE CONTINUED:    
+dplyr: Filter rows with filter()    
+https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html    
+or use subset   
 
 
 
