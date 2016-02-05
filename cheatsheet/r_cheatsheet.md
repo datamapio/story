@@ -11,9 +11,9 @@ A collection of things you need to wrangle data.
 setwd("/Users/username/project"")
 ## Check the current working directory with getwd(); similar to pwd (=print working directory) on the console
 getwd()
-```
+``
 
-##Download and read
+##Downloading and reading files
 
 ###CSV
 ```
@@ -22,7 +22,7 @@ download.file(fileUrl, destfile = "ext.csv", method = "curl")
 ## Check if file has been downloaded
 list.files()
 
-## Always document the time of the download (as the file might change)
+## Always document the time of the download as the file content or location might change
 dateDownloaded <- date()
 dateDownloaded
 
@@ -39,14 +39,15 @@ More about [gdata](http://www.r-bloggers.com/importing-data-directly-from-ms-exc
 fileUrl <- "http://www.data.com/file.xls"
 download.file(fileUrl, destfile = "ext.xls", method = "curl")
 
-## always document the time of the download (as the file might change)
+## Always document the time of the download as the file content or location might change
 dateDownloaded <- date()
 dateDownloaded
 
 ## Install gdata
 install.packages("gdata")
 library(gdata)
-## Read first sheet in as data frame (df). If the Excel has several sheets create ext1 for sheet=1, ext2 for sheet=2 etc.
+## Read first sheet in as data frame (df). 
+## If the Excel has several sheets create ext1 for sheet=1, ext2 for sheet=2 etc.
 ext <- read.xls ("ext.xls", sheet = 1, header = TRUE, stringsAsFactors=FALSE)
 
 ```
