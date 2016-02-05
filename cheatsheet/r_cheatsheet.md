@@ -11,7 +11,7 @@ A collection of things you need to wrangle data.
 setwd("/Users/username/project"")
 ## Check the current working directory with getwd(); similar to pwd (=print working directory) on the console
 getwd()
-``
+```
 
 ##Downloading and reading files
 
@@ -53,7 +53,7 @@ ext <- read.xls ("ext.xls", sheet = 1, header = TRUE, stringsAsFactors=FALSE)
 ```
 
 
-##Adding & Trimming
+##Adding & trimming
 
 ###Add leading zeros
 
