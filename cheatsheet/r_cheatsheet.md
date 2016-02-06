@@ -1,16 +1,16 @@
 #R Cheatsheet
 
 ##Datamap = Map + Data + Viz
-Datamap is all about separation of concerns. 
+<a href="http://www.datamap.io">Datamap</a> is all about separation of concerns. 
 - MAPS: No need to touch, you reference them by their GeoID, named id in the GeoJSON/TopoJSON.
 - DATA:
   - The REF file contains the GeoID, names, codes etc.  
   - THE EXT file contains your external data. You clean, wrangle, (bin) your data so that it can be matched and merged with the REF file.
-  - THE DATA file. After the merge of the REF and the EXT and the selection of columns, we have the data.
-  - other reference files like e.g. CANDIDATE_REF are usually start with what they reference.
-- VIZ: Once you have the data and the map, you can start with the proper data visualization.
+  - THE DATA file. After the merge of the REF and the EXT and the selection of columns, we have the DATA.
+  - other reference files like e.g. CANDIDATE_REF usually start with what they reference, e.g. CANDIDATE.
+- VIZ: Once you have the data and the map, you can start with the proper data visualization in D3 or import the map and data into Mapbox, CartoDB etc.
 
-##Data Cleaning, Wrangling (and Binning) with R
+##Data Cleaning & Wrangling with R
 Below you find a collection of code snippets which should help you with your data cleaning tasks.
 
 
