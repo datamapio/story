@@ -53,9 +53,25 @@ ext <- read.xls ("ext.xls", sheet = 1, header = TRUE, stringsAsFactors=FALSE)
 ```
 
 
-##Adding & trimming
+
+##Adding, pasting & trimming
 
 ###Add leading zeros
+See [stringr](https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html) for str_pad: 
+```
+library(stringr)
+## Add a new variable county_fips to ext2 with leading zeros
+ext$county_fips <- str_pad(ext2$FIPS.Code, width=3, pad = "0")
+```
+
+##Creating GeoID
+```
+## US = 840
+## State FIPS = 2 numeric (e.g. 06)
+## County FIPS = 3 numeric (e.g. 001)
+## Result: 84006001
+data$id <- paste("840", data$state_fips, data$county_fips, sep="")
+```
 
 ###Trim leading and trailing spaces
 
