@@ -12,6 +12,7 @@
 
 ##Data Cleaning & Wrangling with R
 Below you find a collection of code snippets which should help you with your data cleaning tasks.
+In general we recommend to use the libraries of [Hadley Wickham](http://had.co.nz/), especially [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html), [stringr](https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html) and [resphape](http://seananderson.ca/2013/10/19/reshape.html).
 
 
 ##Set Working Directory
@@ -143,8 +144,8 @@ df_new <- df[ , c(1:3,5:6,10)]
 ###Deleting & selecting rows
 TO BE CONTINUED:    
 dplyr: Filter rows with filter()    
-https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html    
-or use subset   
+slice        
+or use subset     
 
 
 
