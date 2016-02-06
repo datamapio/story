@@ -1,6 +1,3 @@
-“us_five_largest_cities_2010_2014” because state fips should include leading zero, ie Alabama is 01, and in your file is just 1.
-
-
 #R Cheatsheet
 
 A collection of things you need to wrangle data.
