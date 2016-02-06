@@ -1,6 +1,17 @@
 #R Cheatsheet
 
-A collection of things you need to wrangle data.
+##Datamap = Map + Data + Viz
+Datamap is all about separation of concerns. 
+- MAPS: No need to touch, you reference them by their GeoID, named id in the GeoJSON/TopoJSON.
+- DATA:
+  - The REF file contains the GeoID, names, codes etc.  
+  - THE EXT file contains your external data. You clean, wrangle, (bin) your data so that it can be matched and merged with the REF file.
+  - THE DATA file. After the merge of the REF and the EXT and the selection of columns, we have the data.
+  - other reference files like e.g. CANDIDATE_REF are usually start with what they reference.
+- VIZ: Once you have the data and the map, you can start with the proper data visualization.
+
+##Data Cleaning, Wrangling (and Binning) with R
+Below you find a collection of code snippets which should help you with your data cleaning tasks.
 
 
 ##Set Working Directory
