@@ -10,8 +10,6 @@ Map Layers:
 - Traffic Systems (Roads, Railways, Flight Routes)
 - Water (Rivers, Lakes etc.)
 
-Additional Data Layers
-- 
 
 ###Simple Map (mostly meant for orientation)
 Simple Maps with Administrative Units and main points as location
@@ -30,6 +28,17 @@ These maps are meant to show data
 
 ###Choropleth
 Choropleth Maps map data to a color. Area units are then colored according to the data value.
+
+###Cartogram
+
+###Dot Distribution Map
+
+###Proportional Symbol Map
+
+###Contour/Isopleth/Isarithmic Map
+
+###Dasymetric Map
+
 
 ###Hexbin Maps
 
@@ -50,6 +59,13 @@ E.g. Repeating Choropleth Maps to show different related datasets (e.g. candidat
 ###Maps and Line Graphs
 
 ##Timeseries Maps
+
+
+
+
+See also:
+http://guides.library.duke.edu/datavis/vis_types
+http://geography.about.com/od/understandmaps/a/map-types.htm
 
 
 
