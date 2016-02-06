@@ -63,9 +63,10 @@ E.g. Repeating Choropleth Maps to show different related datasets (e.g. candidat
 
 
 
-See also:
-http://guides.library.duke.edu/datavis/vis_types
-http://geography.about.com/od/understandmaps/a/map-types.htm
+See also:    
+http://guides.library.duke.edu/datavis/vis_types    
+http://blog.visual.ly/you-are-here-using-maps-in-data-visualization/     
+http://geography.about.com/od/understandmaps/a/map-types.htm   
 
 
 
