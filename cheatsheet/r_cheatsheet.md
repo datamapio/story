@@ -5,8 +5,8 @@
 - MAPS: No need to touch, you reference them by their GeoID, named id in the GeoJSON/TopoJSON.
 - DATA:
   - The REF file contains the GeoID, names, codes etc.  
-  - THE EXT file contains your external data. You clean, wrangle, (bin) your data so that it can be matched and merged with the REF file.
-  - THE DATA file. After the merge of the REF and the EXT and the selection of columns, we have the DATA.
+  - The EXT file contains your external data. You clean, wrangle, (bin) your data so that it can be matched and merged with the REF file.
+  - The result = the DATA. After the merge of the REF and the EXT and the selection of desired columns, we have the DATA.
   - other reference files like e.g. CANDIDATE_REF usually start with what they reference, e.g. CANDIDATE.
 - VIZ: Once you have the data and the map, you can start with the proper data visualization in D3 or import the map and data into Mapbox, CartoDB etc.
 
@@ -92,7 +92,8 @@ trim <- function (x) gsub("^\\s+|\\s+$", "", x)
 df$column <- trim(df$column)
 ```
 
-##Merge REF and EXT by common identifier (horizontal)
+##Merging (horizontal) and Stacking (vertical)
+###Merge REF and EXT by common identifier (horizontal)
 ```
 ## Adding the colums of ext to ref, ext and ref need to have the same identifier (id)
 data <- merge(ref, ext, by="id", all=TRUE)
@@ -105,7 +106,7 @@ The merge() function allows four ways of combining data:
 
 As the REF file contains not only the id, but also the state or county name, it makes most sense to keep all from both data frames and then get rid of the unneeded columns.
 
-##Stacking data frames, one on top of the other (vertical)
+###Stacking data frames, one on top of the other (vertical)
 ```
 AB_dfs <- rbind(df_A, df_B)
 ```
