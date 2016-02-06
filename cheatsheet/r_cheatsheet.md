@@ -10,7 +10,7 @@
   - other reference files like e.g. CANDIDATE_REF usually start with what they reference, e.g. CANDIDATE.
 - VIZ: Once you have the data and the map, you can start with the proper data visualization in D3 or import the map and data into Mapbox, CartoDB etc.
 
-##Data Cleaning & Wrangling with R
+##Data Cleaning, Wrangling and Merging with R
 Below you find a collection of code snippets which should help you with your data cleaning tasks.
 In general we recommend to use the libraries of [Hadley Wickham](http://had.co.nz/), especially [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html), [stringr](https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html) and [resphape](http://seananderson.ca/2013/10/19/reshape.html).
 
