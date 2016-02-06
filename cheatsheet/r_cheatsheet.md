@@ -2,9 +2,9 @@
 
 ##Datamap = Map + Data + Viz
 <a href="http://www.datamap.io">Datamap</a> is all about separation of concerns. 
-- MAPS: No need to touch, you reference them by their GeoID, named id in the GeoJSON/TopoJSON.
+- MAPS: No need to touch, you reference them by their universal GeoID, named id, in the GeoJSON/TopoJSON.
 - DATA:
-  - The REF file contains the GeoID, names, codes etc.  
+  - The REF file contains the id (= universal GeoID), names, codes etc.  
   - The EXT file contains your external data. You clean, wrangle, (bin) your data so that it can be matched and merged with the REF file.
   - The result = the DATA. After the merge of the REF and the EXT and the selection of desired columns, we have the DATA.
   - other reference files like e.g. CANDIDATE_REF usually start with what they reference, e.g. CANDIDATE.
