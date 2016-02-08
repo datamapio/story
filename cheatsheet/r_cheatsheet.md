@@ -149,6 +149,12 @@ slice
 or use subset     
 
 
+##Creating files
+```
+write.table(df, file="df.csv", sep="," ,col.names=TRUE, row.names=FALSE)
+
+```
+
 
 
 
