@@ -61,6 +61,12 @@ ext <- read.xls ("ext.xls", sheet = 1, header = TRUE, stringsAsFactors=FALSE)
 
 ```
 
+##Pattern Searching (grep, grepl)
+```
+## Searching in rows for "word" in Column 1 of data frame ext
+search_pattern <- grepl(pattern = "word", x = ext$column1)
+ext_searched <- ext[search_pattern, ]
+```
 
 
 ##Adding, pasting & trimming
@@ -147,6 +153,16 @@ TO BE CONTINUED:
 dplyr: Filter rows with filter()    
 slice        
 or use subset     
+
+##Ordering data frames
+By default, sorting is ASCENDING. Prepend the sorting variable by a minus sign to indicate DESCENDING order.
+It not always works for me, when I use the column name (eg. id). So I usually use df$id.
+```
+## ordering by id, ascending order
+newdata <- df[order(df$id), ] 
+## ordering by id, descending order
+newdata <- df[order(-df$id), ] 
+```
 
 
 ##Creating files
