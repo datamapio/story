@@ -60,6 +60,31 @@ library(gdata)
 ext <- read.xls ("ext.xls", sheet = 1, header = TRUE, stringsAsFactors=FALSE)
 
 ```
+###TopoJSON/GeoJSON
+See more at: https://github.com/ropensci/geojsonio      
+      
+Install GDAL on the command line first, e.g., usingn homebrew   
+```
+brew install gdal
+```
+Then install rgdal and rgeos
+```
+install.packages("rgdal", type = "source", configure.args = "--with-gdal-config=/Library/Frameworks/GDAL.framework/Versions/1.11/unix/bin/gdal-config --with-proj-include=/Library/Frameworks/PROJ.framework/unix/include --with-proj-lib=/Library/Frameworks/PROJ.framework/unix/lib")
+install.packages("rgeos", type = "source")
+```
+Install the stable version from CRAN
+```
+install.packages("geojsonio")
+library(geojsonio)
+
+## Read TopoJSON from URL
+url <- "https://raw.githubusercontent.com/shawnbot/d3-cartogram/master/data/us-states.topojson"
+tjson <- topojson_read(url, verbose = FALSE)
+
+## Read TopoJSON from File (needs the suffix .topojson)
+file <- "yourfile.topojson"
+tjson <- topojson_read(file)
+```
 
 ##Pattern Searching (grep, grepl)
 ```
@@ -116,6 +141,9 @@ As the REF file contains not only the id, but also the state or county name, it 
 ```
 AB_dfs <- rbind(df_A, df_B)
 ```
+      
+See also:      
+http://www.princeton.edu/~otorres/Merge101R.pdf        
 
 
 ##Deleting, selecting, adding, renaming
