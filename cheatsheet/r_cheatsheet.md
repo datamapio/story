@@ -123,16 +123,16 @@ trim <- function (x) gsub("^\\s+|\\s+$", "", x)
 df$column <- trim(df$column)
 ```
 
-###Removing ","" in numbers and making them numeric (by column)
+###Removing comma in numbers and transform all characters to numbers (by column)
 Columns 3 to 9 are currently in the form "1,929". We want to remove the "," and make them numeric.
-´´´
+```
 x <- ext[, c(3:9)] 
 
 ## 2 = columns
 x <- apply(x, 2, function(y) as.numeric(gsub(",", "", y)))
 ext[, c(3:9)] <- x
 
-´´´
+``
 
 
 ##Merging (horizontal) and Stacking (vertical)
