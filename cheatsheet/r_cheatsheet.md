@@ -123,6 +123,18 @@ trim <- function (x) gsub("^\\s+|\\s+$", "", x)
 df$column <- trim(df$column)
 ```
 
+###Removing ","" in numbers and making them numeric (by column)
+Columns 3 to 9 are currently in the form "1,929". We want to remove the "," and make them numeric.
+´´´
+x <- ext[, c(3:9)] 
+
+## 2 = columns
+x <- apply(x, 2, function(y) as.numeric(gsub(",", "", y)))
+ext[, c(3:9)] <- x
+
+´´´
+
+
 ##Merging (horizontal) and Stacking (vertical)
 ###Merge REF and EXT by common identifier (horizontal)
 ```
@@ -199,6 +211,9 @@ write.table(df, file="df.csv", sep="," ,col.names=TRUE, row.names=FALSE)
 
 ```
 
+
+##Other Cheatsheets
+https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
 
 
 
