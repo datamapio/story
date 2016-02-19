@@ -133,6 +133,7 @@ x <- apply(x, 2, function(y) as.numeric(gsub(",", "", y)))
 ext[, c(3:9)] <- x
 
 ```
+See also: https://www.datacamp.com/community/tutorials/r-tutorial-apply-family
 
 
 ##Merging (horizontal) and Stacking (vertical)
@@ -148,6 +149,13 @@ The merge() function allows four ways of combining data:
 - Right outer join: To include all the rows of your data frame y and only those from x that match, specify all.y=TRUE.
 
 As the REF file contains not only the id, but also the state or county name, it makes most sense to keep all from both data frames and then get rid of the unneeded columns.
+
+###Merge REF and EXT by common identifier, named differently in each data frame
+```
+data <- merge(ref, ext, by.x="gdenr", by.y="GMDNR")
+```
+
+
 
 ###Stacking data frames, one on top of the other (vertical)
 ```
