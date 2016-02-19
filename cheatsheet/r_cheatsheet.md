@@ -132,7 +132,7 @@ x <- ext[, c(3:9)]
 x <- apply(x, 2, function(y) as.numeric(gsub(",", "", y)))
 ext[, c(3:9)] <- x
 
-``
+```
 
 
 ##Merging (horizontal) and Stacking (vertical)
