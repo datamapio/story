@@ -152,7 +152,7 @@ As the REF file contains not only the id, but also the state or county name, it 
 
 ###Merge REF and EXT by common identifier, named differently in each data frame
 ```
-data <- merge(ref, ext, by.x="gdenr", by.y="GMDNR")
+data <- merge(ref, ext, by.x="gdenr", by.y="GMDNR",  all=TRUE)
 ```
 
 
