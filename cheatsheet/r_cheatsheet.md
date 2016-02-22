@@ -152,7 +152,7 @@ As the REF file contains not only the id, but also the state or county name, it 
 
 ###Merge REF and EXT by common identifier, named differently in each data frame
 ```
-data <- merge(ref, ext, by.x="gdenr", by.y="GMDNR",  all=TRUE)
+data <- merge(ref, ext, by.x="gdenr", by.y="GMDNR", all=TRUE)
 ```
 
 
@@ -202,6 +202,16 @@ dplyr: Filter rows with filter()
 slice        
 or use subset     
 
+###Deleting rows by specific id, municipality_number, etc.
+Create a vector with your numbers to delete
+```
+del_muni <- c("5011", "5098", "5101", "5106", "5110", "5116", "5123", "5127", "5128", "5134", "5153", "5165", "5217", "5223")
+```
+Delete the specific rows from your data frame
+```
+ref_nov <-ref_reduced[!(ref_reduced$municipality_number %in% del_muni), ] 
+```
+
 ##Ordering data frames
 By default, sorting is ASCENDING. Prepend the sorting variable by a minus sign to indicate DESCENDING order.
 It not always works for me, when I use the column name (eg. id). So I usually use df$id.
@@ -222,6 +232,8 @@ write.table(df, file="df.csv", sep="," ,col.names=TRUE, row.names=FALSE)
 
 ##Other Cheatsheets
 https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+##R Manuals
+https://cran.r-project.org/doc/manuals/r-release/R-intro.html
 
 
 
