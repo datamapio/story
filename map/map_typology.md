@@ -43,7 +43,7 @@ Choropleth Maps map data to a color. Area units are then colored according to th
 ###Hexbin Maps
 
 ###Raster Maps
-e.g. Zurich
+e.g. https://www.stadt-zuerich.ch/content/dam/stzh/prd/Deutsch/Statistik/Aktuell/Veranstaltungen/ST12_Praes_2006_11.pdf
 
 
 ##Overview and Detail Map

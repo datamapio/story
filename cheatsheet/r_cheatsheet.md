@@ -200,7 +200,18 @@ df_new <- df[ , c(1:3,5:6,10)]
 TO BE CONTINUED:    
 dplyr: Filter rows with filter()    
 slice        
-or use subset     
+or use subset 
+
+Filter rows on specific names 
+```
+mtcars$type <- rownames(mtcars)
+filter(mtcars, grepl('Toyota|Mazda', type))
+```
+Excluding rows with specific names
+```
+filter(mtcars, !grepl('Toyota|Mazda', type))
+```
+
 
 ###Deleting rows by specific id, municipality_number, etc.
 Create a vector with your numbers to delete
