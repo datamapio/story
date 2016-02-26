@@ -31,12 +31,33 @@ Each external call is dangerous (the site could be unresponsive at any time) and
 **Don't:**
 - Too many calls (repeated over every page)
 - Too many outside calls
-- No unnecessary links
+- Avoid repetitions (e.g. bootstrap)
+- No unnecessary links (underscore, jquery are not used)
 
 Check with:   
 https://varvy.com/pagespeed/  
 73 out of 100
 This webpage is on the slow side of average.
+
+http://tools.pingdom.com/fpt/
+28 requests
+Load Time: 803ms
+
+Time Spent per State         
+- Connect 26.93%  
+- Wait  24.59%  
+- SSL 21.33%  
+- Receive 19.22%  
+- DNS 5.40% 
+- Send  2.53% 
+
+Time Spent per Content Type         
+- Script  39.77%  
+- CSS 29.08%  (something wrong here!)
+- Other 17.40%  
+- HTML  10.66%  
+- Image 3.09% 
+
 
 ```
 <title>Any title</title>
