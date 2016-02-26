@@ -4,8 +4,14 @@
 
 ###1. Map Accuracy through Time
 Datamap strives to create the most accurate area unit maps over time.
-This means that we judge every map or map visualization by its map accuracy first. 
-- Have we researched it?
+This means that we judge every map or map visualization by its map accuracy first.     
+This means that the map together with the reference file (REF) are Datamap's "ground truth".    
+Everything following: external data, the visualization etc. comes second. 
+When judging a map the following questions should be raised:   
+- What is the source?
+- What is the date?
+- Have we properly researched it? Have we compared different sources (e.g. election data and map data on a given date)?
+- Do we properly understand the components of the map (e.g. municipalities, neighboring countries, lakes)?
 - Do we know that the map is accurate for the time we need it?
 - Do we have a REF or reference file available? If not, do this first
 
