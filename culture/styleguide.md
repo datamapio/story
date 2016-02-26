@@ -32,6 +32,7 @@ Each external call is dangerous (the site could be unresponsive at any time) and
 - Too many calls (repeated over every page)
 - Too many outside calls
 - No unnecessary links
+
 Check with:   
 https://varvy.com/pagespeed/  
 73 out of 100
