@@ -29,23 +29,29 @@ This means:
 ###5. GeoID
 All maps use global identifiers, so called GeoIDs (to keep the map as small as possible).
 The construction of Datamap's GeoIDs can be checked on [Github](https://github.com/datamapio/geoid/blob/master/lookup.md).
-Changes, problems have to be communicated to the GEOID committee.
+Changes, problems have to be communicated to the GeoID committee.
 
 ###6. Separation of concerns
 There are three distinct areas:
 - MAP area
 - DATA area
-- VIZ area             
+- VIZ area  
+
 Treat each one separately.            
 As a end user you should never need to work on the map, but always connect your external data to the REF.
 
 ####MAP
-There is one or more layers of maps, e.g.    
+There is one or more layers of maps, e.g. 
+- States as shapes   
 - Counties as shapes
 - Cities as points (with geoid and lat/long)
 - Cities as shapes
 - Rivers and Lakes
 - Major transportation routes
+
+Keep them separate, so that you have a separation of concerns here as well.     
+This is important when one layer changes, while the others stay the same (e.g. county shapes change, state shape stays the same).   
+
 
 ####DATA: REF
 Each Map layer has a correspondent REF layer. The REF file is the "ground truth".         
