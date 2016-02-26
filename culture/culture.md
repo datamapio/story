@@ -13,10 +13,10 @@ This means that we judge every map or map visualization by its map accuracy firs
 The download and the cleaning, wrangling of any external data has to be done programmatically, so that anyone can reproduce it. 
 We use R for this today, but this might change in the future.
 
-###3. Communication & Transparency
+###3. Transparency & Communication
 Communicate your findings in a README.md.
 Explain your choices especially when there is no simple right and wrong.
-Be transparent.
+Be transparent about processes, understandings and choices all the time.
 
 ###4. Text based, human readable
 Be it data, maps, visualizations: they are text based and human readable.   
@@ -55,7 +55,8 @@ The REF contains also common matching codes, so that external data (EXT) can be 
 Ideally there is one REF file, but if there are many language version for example, there could be several, identified by their ISO language code.
 
 ####DATA: EXT
-External data (= EXT) is first processed to fit the REF file. The REF file helps to understand the difference between EXT and REF.      
+External data (= EXT) is first processed (cleaned, wrangled) to fit the REF file. 
+The REF file helps to understand the difference between EXT and REF.      
 Once the external is cleaned and renamed, it can be merged with the REF File.
 
 ####DATA = MERGER OF REF AND EXT
@@ -69,7 +70,7 @@ Things like tooltips and legends (see the excellent d3.legend) should also be re
 
 ## Process
 1. Choose a map
-2. Reference or Create the GeoID (get an understanding of the space)
+2. Reference or Create the GeoID (get an understanding of the space first before creating one)
 3. Create the REF file (reference file), publicly available.     
    Explain in a README.md how  
 4. Create & Store GeoJSON with GeoIDs    
