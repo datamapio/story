@@ -40,8 +40,8 @@ https://varvy.com/pagespeed/
 This webpage is on the slow side of average.
 
 http://tools.pingdom.com/fpt/
-28 requests
-Load Time: 803ms
+28 requests            
+Load Time: 803ms           
 
 Time Spent per State         
 - Connect 26.93%  
@@ -53,7 +53,7 @@ Time Spent per State
 
 Time Spent per Content Type         
 - Script  39.77%  
-- CSS 29.08%  (something wrong here!)
+- CSS 29.08%  
 - Other 17.40%  
 - HTML  10.66%  
 - Image 3.09% 
