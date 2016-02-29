@@ -1,5 +1,13 @@
 #Datamap Culture
 
+##Datamap
+Datamap is a cognitive medium – a media environment to support and enable (spatial) thought.
+It becomes part of the way users think about spatial, data and visual relationships, and expands the range of ideas they can have.
+Datamap augments the human intellect*.           
+* See Douglas Engelbart's Augmenting Human Intellect: A Conceptual Framework, and Alan Kay and Adele Goldberg's Personal Dynamic Media.
+See: http://cognitivemedium.com/emm/emm.html        
+
+
 ##First Principles
 
 ###1. Map Accuracy through Time
@@ -90,4 +98,8 @@ Things like tooltips and legends (see the excellent d3.legend) should also be re
 5. Create the TopoJSON
 6. Every public map needs to be verified and approved by at least one additional person.     
    Approval processes have to be in written form.  
+
+
+
+
 
