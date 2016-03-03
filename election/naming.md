@@ -1,6 +1,9 @@
 #Naming
 
-We want to create a vocabulary and abbreviations for elections and votes. 
+We want to create a vocabulary and abbreviations for elections and votes, so that it is easy for people to lookup uncommon abbreviations.
+This goes from keeping variable/column names as small as possible (e.g. prop_a_yes_pct or even a_yes_pct) to identify party names internationally (e.g. ch_fdp or us_dem).
+
+
 The first and canonical version is in english, translations in other languages are highly welcome.
 
 
@@ -121,8 +124,19 @@ Percent of Americans who voted in the 2012 Presidential election	57.5 %
 State with the highest voter turnout rate (Minnesota)	75 %
 State with the lowest voter turnout rate (Utah)	53.1 %
 ```
+entitled to vote = registered to vote (in some countries you have to register first, in others you are entitled to vote by default)
+
+
 
 ###Voter Turnout, Voter Turnout Rate
+
+
+
+
+##See also
+http://ucsd.libguides.com/c.php?g=90733&p=584828
+http://www.globalelectionsdatabase.com/index.php/links
+
 
 
 
