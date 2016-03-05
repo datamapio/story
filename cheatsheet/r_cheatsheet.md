@@ -123,6 +123,14 @@ trim <- function (x) gsub("^\\s+|\\s+$", "", x)
 df$column <- trim(df$column)
 ```
 
+###Trim 3 trailing zeros
+```
+trim <- function (x) gsub("0{3}$", "", x)
+
+## apply trim function to a new column
+df$new_column <- trim(df$column)
+```
+
 ###Removing the comma and transforming all characters to numbers (by column)
 Entries in columns 3 to 9 are currently in the form "1,929" as characters. We want to remove the "," and make them numeric.
 ```
