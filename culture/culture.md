@@ -99,7 +99,8 @@ Things like tooltips and legends (see the excellent d3.legend) should also be re
 6. Every public map needs to be verified and approved by at least one additional person.     
    Approval processes have to be in written form.  
 
-
+###See also:
+https://github.com/grssnbchr/rddj-reproducibility-workflow
 
 
 
