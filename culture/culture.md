@@ -101,6 +101,7 @@ Things like tooltips and legends (see the excellent d3.legend) should also be re
 
 ###See also:
 https://github.com/grssnbchr/rddj-reproducibility-workflow
+https://docs.google.com/presentation/d/1Q57mZKPw0EbeIPFCkkP4G8W9L7GPDzrQoDD9_zqT1NE/edit#slide=id.g10d730dff2_2_83
 
 
 
