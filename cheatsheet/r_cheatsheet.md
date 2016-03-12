@@ -264,6 +264,8 @@ http://www.science.smith.edu/~amcnamara/NICAR2016.html
 https://cran.r-project.org/doc/manuals/r-release/R-intro.html
 ##Regex
 http://regex.danwin.com/slides/
+Regex101 - online regex editor and debugger         
+https://regex101.com/
 
 
 
