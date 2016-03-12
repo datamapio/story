@@ -231,6 +231,12 @@ Delete the specific rows from your data frame
 ref_nov <-ref_reduced[!(ref_reduced$municipality_number %in% del_muni), ] 
 ```
 
+###Remove rows conditionally
+```
+## All rows with ZZ in the column cd114_fips are removed
+ext <-ext[!(ext$cd114_fips =="ZZ"),]
+```
+
 ##Ordering data frames
 By default, sorting is ASCENDING. Prepend the sorting variable by a minus sign to indicate DESCENDING order.
 It not always works for me, when I use the column name (eg. id). So I usually use df$id.
@@ -251,8 +257,13 @@ write.table(df, file="df.csv", sep="," ,col.names=TRUE, row.names=FALSE)
 
 ##Other Cheatsheets
 https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+##R Intros
+Hands-on R class        
+http://www.science.smith.edu/~amcnamara/NICAR2016.html        
 ##R Manuals
 https://cran.r-project.org/doc/manuals/r-release/R-intro.html
+##Regex
+http://regex.danwin.com/slides/
 
 
 
