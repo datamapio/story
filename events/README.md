@@ -5,22 +5,28 @@ d3 Oakland Meetup, April 12, 2016
 
 ##GEO/MAPPING
 
-#NACIS2016
-Colorado Springs, CO
-October 19th–22nd, 2016
-http://nacis.org/annual-meeting/current-meeting/
+NACIS2016             
+Colorado Springs, CO           
+October 19th–22nd, 2016           
+http://nacis.org/annual-meeting/current-meeting/           
 
 ##DATAVIZ
-OpenViz Conference, April, 25-26
-https://openvisconf.com/
 
-#DataViz16
-Boston, September 7-8, 2016
+**GOING**
+OpenViz Conference, April, 25-26       
+https://openvisconf.com/        
+
+DataViz16           
+Boston, September 7-8, 2016            
 https://theinnovationenterprise.com/summits/data-visualization-summit-boston-2016
 
 
 
 ##DATA JOURNALISM 
+
+Computation & Journalism
+Sept 30- October 1st, 2016
+http://journalism.stanford.edu/cj2016/
 
 IRE
 New Orleaans, June 16-19, 2016
