@@ -8,7 +8,13 @@ d3 Oakland Meetup, April 12, 2016
 NACIS2016             
 Colorado Springs, CO           
 October 19th–22nd, 2016           
-http://nacis.org/annual-meeting/current-meeting/           
+http://nacis.org/annual-meeting/current-meeting/    
+
+AAG Mapathon
+March 30th‒ April 1st, 2016, 
+San Francisco, CA
+http://aagmapathon.org/   
+    
 
 ##DATAVIZ
 
