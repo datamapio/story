@@ -14,13 +14,17 @@ AAG Mapathon
 March 30th‒ April 1st, 2016, 
 San Francisco, CA
 http://aagmapathon.org/   
-    
+
 
 ##DATAVIZ
 
 **GOING**
 OpenViz Conference, April, 25-26       
-https://openvisconf.com/        
+https://openvisconf.com/    
+
+Information+ Conference
+JUN 16 AT 8:00 AM, VANCOUVER, BC, CANADA
+https://www.eventbrite.ca/e/information-conference-tickets-22512039115    
 
 DataViz16           
 Boston, September 7-8, 2016            
