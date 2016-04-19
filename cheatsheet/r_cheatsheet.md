@@ -271,7 +271,7 @@ write.table(df, file="df.csv", sep="," ,col.names=TRUE, row.names=FALSE)
 
 
 ##Other Cheatsheets
-http://shancarter.github.io/data-field-guide/
+http://shancarter.github.io/data-field-guide/      
 https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
 ##R Intros
 Hands-on R class        
