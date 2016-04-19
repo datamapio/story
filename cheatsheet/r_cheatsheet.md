@@ -4,11 +4,11 @@
 <a href="http://www.datamap.io">Datamap</a> is all about separation of concerns. 
 - MAPS: No need to touch, you reference them by their universal GeoID, named id, in the GeoJSON/TopoJSON.
 - DATA:
-  - The REF file contains the id (= universal GeoID), names, codes etc.  
+  - The REF file contains the id (= the global scope GeoID), names, codes etc.  
   - The EXT file contains your external data. You clean, wrangle, (bin) your data so that it can be matched and merged with the REF file.
   - The result = the DATA. After the merge of the REF and the EXT and the selection of desired columns, we have the DATA.
   - other reference files like e.g. CANDIDATE_REF usually start with what they reference, e.g. CANDIDATE.
-- VIZ: Once you have the data and the map, you can start with the proper data visualization in D3 or import the map and data into Mapbox, CartoDB etc.
+- VIZ: Once you have the data and the map, you can start with the proper data visualization in D3 or import the map and data into services like Mapbox, CartoDB etc.
 
 ##Data Cleaning, Wrangling and Merging with R
 Below you find a collection of code snippets which should help you with your data cleaning tasks.
@@ -205,10 +205,25 @@ df_new <- df[ , c(1:3,5:6,10)]
 ```
 
 ###Deleting & selecting rows
-TO BE CONTINUED:    
-dplyr: Filter rows with filter()    
-slice        
-or use subset 
+
+Filter data with subset      
+```
+data_2010_2015 <- subset(data, year >= 2010 | year <= 2015)
+```
+   
+Filter rows with filter() 
+```
+library(dplyr)
+vbm <- filter(ext, grepl('VBM', reporting_type))
+```
+
+
+Selecting rows by position
+```
+library(dplyr)
+ext <- slice(propf, 4:797)
+```
+
 
 Filter rows on specific names 
 ```
