@@ -17,7 +17,7 @@ In general we recommend to use the libraries of [Hadley Wickham](http://had.co.n
 
 ##Set Working Directory
 ```
-setwd("/Users/username/project"")
+setwd("/Users/username/project")
 ## Check the current working directory with getwd(); similar to pwd (=print working directory) on the console
 getwd()
 ```
@@ -256,10 +256,12 @@ write.table(df, file="df.csv", sep="," ,col.names=TRUE, row.names=FALSE)
 
 
 ##Other Cheatsheets
+http://shancarter.github.io/data-field-guide/
 https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
 ##R Intros
 Hands-on R class        
-http://www.science.smith.edu/~amcnamara/NICAR2016.html        
+http://www.science.smith.edu/~amcnamara/NICAR2016.html   
+http://www.r-tutor.com/elementary-statistics     
 ##R Manuals
 https://cran.r-project.org/doc/manuals/r-release/R-intro.html
 ##Regex
