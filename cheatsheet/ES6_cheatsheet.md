@@ -26,9 +26,7 @@ addNumber(4, 5, 6, 7, 8);
 ```
 Flattening arrays with the spread operator
 ```
-//https://gka.github.io/palettes/#diverging|c0=,#f2371b,#F04A00|c1=#F04A00,#FF5722|steps=9|bez0=1|bez1=1|coL0=1|coL1=1
 const redOrangeToOrange = ['#f2371b','#f23b17','#f14110','#f1450a','#f04a00','#f44d0b','#f75114','#fb541c','#ff5722'];
-//http://gka.github.io/palettes/#colors=#ffefe8,black|steps=11|bez=1|coL=1
 const whiteOrangeToBlack = ['#ffefe8','#e3d4ce','#c6bab5','#aba09c','#908884','#76706c','#5e5956','#464341','#302e2d','#1c1a1a','#000000'];
 
 // Flattening arrays with the spread operator
