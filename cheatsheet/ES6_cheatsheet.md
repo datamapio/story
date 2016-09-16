@@ -11,7 +11,16 @@ function validateShoppingList (...items) {
   return items;
 }
 
-validateShoppingList("orange", "peas", "honey");
+validateShoppingList("Oranges", "Apples", "Honey");
 ```
-Rest: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+```
+function addNumber(...numbers) {
+  return numbers.reduce((sum, number) => {
+		return sum + number;
+  }, 0);
+}
+
+addNumber(4, 5, 6, 7, 8);
+```
+Rest: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters     
 Spread: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
