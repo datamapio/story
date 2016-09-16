@@ -1,4 +1,6 @@
 #ES6 Cheatsheet
+Examples from: https://www.udemy.com/javascript-es6-tutorial/learn/v4/overview
+
 
 ##Rest and Spread Operator
 ```
