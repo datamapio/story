@@ -13,7 +13,7 @@ function validateShoppingList(...items) {
   return items;
 }
 
-validateShoppingList("Oranges", "Apples", "Honey");
+validateShoppingList('Oranges', 'Apples', 'Honey');
 ```
 ```
 function addNumber(...numbers) {
