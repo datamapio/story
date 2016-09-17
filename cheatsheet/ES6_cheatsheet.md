@@ -63,7 +63,7 @@ amount;
 ```
 2. Example: properties as arguments, only use properties with the object name
 ```
-var savedFile = {
+const savedFile = {
 	name: "myfile",
 	extension: "jpg",
 	size: 14400	
@@ -75,5 +75,16 @@ function fileSummary({ name, extension, size}, {color}) {
 	return `The ${color} file ${name}.${extension} has the size of ${size}.`;
 }
 
-fileSummary(savedFile, {color:"red"});
+fileSummary(savedFile, {color:'red'});
+
 ```
+3. Destructuring Arrays
+```
+const companies = ['Kaywa','Datamap','Uber'];
+
+// Needs array brackets here
+const [ name, name1, name2 ] = companies;
+name;
+name1;
+```
+
