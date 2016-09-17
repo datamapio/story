@@ -39,20 +39,21 @@ Spread: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operat
 
 ##Destructuring
 ```
-//ES5 
+
 var expense = {
 	type: 'Business',
 	amount: '$45 USD'
 };
 
 1. 
-var type = expense.type;
-var ammount = expense.amount;
+//ES5 
+//var type = expense.type;
+//var ammount = expense.amount;
 
 2. 
 //ES6
-const { type } = expense; // not an object on the left
-const { amount } = expense;
+//const { type } = expense; // not an object on the left
+//const { amount } = expense;
 
 3.
 const { type, amount } = expense; // variable must be identical to the property
