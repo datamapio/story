@@ -35,3 +35,28 @@ combinedColors;
 ```
 Rest: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters     
 Spread: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
+
+
+##Destructuring
+```
+//ES5 
+var expense = {
+	type: 'Business',
+	amount: '$45 USD'
+};
+
+1. 
+var type = expense.type;
+var ammount = expense.amount;
+
+2. 
+//ES6
+const { type } = expense; // not an object on the left
+const { amount } = expense;
+
+3.
+const { type, amount } = expense; // variable must be identical to the property
+type;
+amount;
+
+```
