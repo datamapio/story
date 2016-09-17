@@ -38,8 +38,8 @@ Spread: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operat
 
 
 ##Destructuring
+1. Example
 ```
-
 var expense = {
 	type: 'Business',
 	amount: '$45 USD'
@@ -60,4 +60,19 @@ const { type, amount } = expense; // variable must be identical to the property
 type;
 amount;
 
+```
+2. Example: properties as arguments, only use properties with the object name
+```
+var savedFile = {
+	name: "myfile",
+	extension: "jpg",
+	size: 14400	
+};
+
+// instead of fileSummary(file) and then return `The ${file.name} file...
+function fileSummary({ name, extension, size}, {color}) {
+	return `The ${color} file ${name}.${extension} has the size of ${size}.`
+}
+
+fileSummary(savedFile, {color:"red"});
 ```
