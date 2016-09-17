@@ -38,7 +38,7 @@ Spread: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operat
 
 
 ##Destructuring
-1. Example
+Example
 ```
 var expense = {
 	type: 'Business',
@@ -61,7 +61,7 @@ type;
 amount;
 
 ```
-2. Example: properties as arguments, only use properties with the object name
+Example: properties as arguments, only use properties with the object name
 ```
 const savedFile = {
 	name: "myfile",
@@ -78,13 +78,24 @@ function fileSummary({ name, extension, size}, {color}) {
 fileSummary(savedFile, {color:'red'});
 
 ```
-3. Destructuring Arrays
+Destructuring Arrays
 ```
-const companies = ['Kaywa','Datamap','Uber'];
+const companies = ['Datamap', 'Kaywa', 'Uber'];
 
-// Needs array brackets here
+// Needs array or square brackets for elements, because we don't want a property. 
+// Replaces const firstCompany = companies[0]; etc.
+
 const [ name, name1, name2 ] = companies;
 name;
 name1;
+
+// With curly braces/brackets, we ask for a property
+const { length } = companies;
+length;
+
+// with the rest operator, we get back the rest 
+const [ firstName, ...rest ] = companies;
+rest;
+
 ```
 
