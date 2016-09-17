@@ -70,8 +70,9 @@ var savedFile = {
 };
 
 // instead of fileSummary(file) and then return `The ${file.name} file...
+
 function fileSummary({ name, extension, size}, {color}) {
-	return `The ${color} file ${name}.${extension} has the size of ${size}.`
+	return `The ${color} file ${name}.${extension} has the size of ${size}.`;
 }
 
 fileSummary(savedFile, {color:"red"});
