@@ -116,6 +116,10 @@ const Kaywa = {
 	locations: ["San Francisco", "Waedenswil", "Belgrade"]
 };
 
+const { locations: locations } = Kaywa;
+locations; // ["San Francisco","Waedenswil","Belgrade"]
+
+// Get the first element in the Array
 const { locations: [ location ] } = Kaywa;
 location; // San Francisco
 ```
