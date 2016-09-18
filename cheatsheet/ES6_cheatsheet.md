@@ -98,4 +98,26 @@ const [ firstName, ...rest ] = companies;
 rest;
 
 ```
+Array with Objects
+```
+const companies = [
+  { name: "Google", location: "Mountain View"},
+  { name: "Facebook", location: "Menlo Park"},
+  { name: "Uber", location: "San Francisco"}
+];
+
+const [ location ] = companies; // {"name":"Google","location":"Mountain View"}
+const [{ location }] = companies; // Mountain View
+
+```
+Object with Array
+```
+const Kaywa = {
+	locations: ["San Francisco", "Waedenswil", "Belgrade"]
+};
+
+const { locations: [ location ] } = Kaywa;
+location; // San Francisco
+```
+
 
