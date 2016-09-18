@@ -123,5 +123,43 @@ locations; // ["San Francisco","Waedenswil","Belgrade"]
 const { locations: [ location ] } = Kaywa;
 location; // San Francisco
 ```
+Turn a list of arrays into a list of objects     
+Problem:
+
+```
+// API data structure
+const points = [
+  [4, 5],
+  [0, 3],
+  [20, 1]
+];
+
+// Data structure needed within the graphic
+[
+  {x: 4, y: 5},
+  {x: 0, y: 3},
+  {x: 20, y: 1}
+];
+
+```
+Solution:
+```
+// API data structure
+const points = [
+  [4, 5],
+  [0, 3],
+  [20, 1]
+];
+
+points.map(([x, y]) => {
+	return { x, y};
+});
+
+```
+
+
+
+
+
 
 
