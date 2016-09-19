@@ -172,7 +172,6 @@ classesAsObject;
 ```
 ##Classes
 ```
-
 class Car {
   constructor({ title }) {
     this.title = title;
@@ -196,11 +195,10 @@ class Tesla extends Car {
 }
 
 
-const tesla = new Tesla({ color: "blue", title: "The future"})
+const tesla = new Tesla({ color: "blue", title: "The future"});
 tesla;
 tesla.honk();
 tesla.drive();
-
 ```
 
 
