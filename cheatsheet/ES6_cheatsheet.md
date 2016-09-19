@@ -170,7 +170,38 @@ const classesAsObject = classes.map(([subject, time, teacher]) => {
 
 classesAsObject;
 ```
+##Classes
+```
 
+class Car {
+  constructor({ title }) {
+    this.title = title;
+  }
+
+  honk() {
+    return "beep";
+  }
+
+}
+
+class Tesla extends Car {
+  constructor(options) {
+    super(options);
+    this.color = options.color;
+  }
+
+  drive() {
+   return "shhhh";
+  }
+}
+
+
+const tesla = new Tesla({ color: "blue", title: "The future"})
+tesla;
+tesla.honk();
+tesla.drive();
+
+```
 
 
 
