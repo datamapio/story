@@ -202,6 +202,27 @@ tesla.drive();
 ```
 See also: https://scotch.io/tutorials/better-javascript-with-es6-pt-ii-a-deep-dive-into-classes
 
+##Generators
+Generators, a new feature of ES6, are functions that can be paused and resumed (think cooperative multitasking or coroutines). That helps with many applications. 
+
+Two important ones are:
+- Implementing iterables
+- Blocking on asynchronous function calls
+```
+function* colors() {
+  yield "red";
+  yield "blue";
+  yield "yellow";
+  yield "green";
+}
+
+const myColors = [];
+for (let color of colors()) {
+  myColors.push(color);
+}
+
+myColors; //["red", "blue", "yellow", "green"]
+```
 
 
 
