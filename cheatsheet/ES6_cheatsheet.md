@@ -223,6 +223,23 @@ for (let color of colors()) {
 
 myColors; //["red", "blue", "yellow", "green"]
 ```
+See also: http://exploringjs.com/es6/ch_generators.html#_overview-16
+```
+const engineeringTeam = {
+  size: 3,
+  department: 'Engineering',
+  lead: 'Jill',
+  engineer: 'Dave',
+  manager: 'Alex'
+}
 
+function* teamIterator(team) {
+  yield team.lead;
+  yield team.engineer;
+}
 
-
+const names = [];
+for (let name of teamIterator(engineeringTeam)) {
+  names.push(name);
+}
+```
