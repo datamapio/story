@@ -298,7 +298,7 @@ names;
 ```
 promise = new Promise( (resolve, reject) => {
   setTimeout(() => {
-      resolve();
+    resolve();
   }, 3000); 
   //reject();
 });
@@ -308,3 +308,12 @@ promise
   .then(() => console.log("I was also ran"))
   .catch(() => console.log("Not cool"));
   ```
+###Fetch
+Stephen talks about the shortcomings of the native fetch (no catch when there is a 404 status) and recommends to use libraries like Axios.
+```
+url = 'https://jsonplaceholder.typicode.com/posts/';
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
