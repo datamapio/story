@@ -260,7 +260,9 @@ for (let name of TeamIterator(engineeringTeam)) {
 
 names;
 ```
-Generator Delegation, Refactored with Symbol.iterator
+Generator Delegation, Refactored with Symbol.iterator    
+
+The Symbol.iterator well-known symbol specifies the default iterator for an object. Used by for...of.      
 ```
 const testingTeam = {
   lead: 'Amanda',
@@ -277,17 +279,16 @@ const engineeringTeam = {
   department: 'Engineering',
   lead: 'Jill',
   engineer: 'Dave',
-  manager: 'Alex'
-}
-
-function* TeamIterator(team) {
-  yield team.lead;
-  yield team.engineer; 
-  yield* team.testingTeam;
+  manager: 'Alex',
+  [Symbol.iterator]: function*() {
+    yield this.lead;
+    yield this.engineer;
+    yield* this.testingTeam;
+  }
 }
 
 const names = [];
-for (let name of TeamIterator(engineeringTeam)) {
+for (let name of engineeringTeam) {
   names.push(name);
 }
 
