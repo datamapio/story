@@ -225,7 +225,7 @@ myColors; //["red", "blue", "yellow", "green"]
 ```
 See also: http://exploringjs.com/es6/ch_generators.html#_overview-16       
 
-Generator Delegation      
+###Generator Delegation      
 ```
 const testingTeam = {
   lead: 'Amanda',
@@ -260,7 +260,7 @@ for (let name of TeamIterator(engineeringTeam)) {
 
 names;
 ```
-Generator Delegation, Refactored with Symbol.iterator    
+###Generator Delegation, Refactored with Symbol.iterator    
 
 The Symbol.iterator well-known symbol specifies the default iterator for an object. Used by for...of.      
 ```
@@ -280,7 +280,7 @@ const engineeringTeam = {
   lead: 'Jill',
   engineer: 'Dave',
   manager: 'Alex',
-  [Symbol.iterator]: function*() {
+  [Symbol.iterator]: function* () {
     yield this.lead;
     yield this.engineer;
     yield* this.testingTeam;
@@ -294,3 +294,17 @@ for (let name of engineeringTeam) {
 
 names;
 ```
+##Promises
+```
+promise = new Promise( (resolve, reject) => {
+  setTimeout(() => {
+      resolve();
+  }, 3000); 
+  //reject();
+});
+
+promise
+  .then(() => console.log("Finally!"))
+  .then(() => console.log("I was also ran"))
+  .catch(() => console.log("Not cool"));
+  ```
