@@ -223,9 +223,17 @@ for (let color of colors()) {
 
 myColors; //["red", "blue", "yellow", "green"]
 ```
-See also: http://exploringjs.com/es6/ch_generators.html#_overview-16
+See also: http://exploringjs.com/es6/ch_generators.html#_overview-16       
+
+Generator Delegation      
 ```
+const testingTeam = {
+  lead: 'Amanda',
+  tester: 'Bill'
+}
+
 const engineeringTeam = {
+  testingTeam,
   size: 3,
   department: 'Engineering',
   lead: 'Jill',
@@ -233,13 +241,55 @@ const engineeringTeam = {
   manager: 'Alex'
 }
 
-function* teamIterator(team) {
+function* TeamIterator(team) {
   yield team.lead;
   yield team.engineer;
+  const testingTeamGenerator = TestingTeamIterator(team.testingTeam);
+  yield* testingTeamGenerator;
+}
+
+function* TestingTeamIterator(team) {
+  yield team.lead;
+  yield team.tester;
 }
 
 const names = [];
-for (let name of teamIterator(engineeringTeam)) {
+for (let name of TeamIterator(engineeringTeam)) {
   names.push(name);
 }
+
+names;
+```
+Generator Delegation, Refactored with Symbol.iterator
+```
+const testingTeam = {
+  lead: 'Amanda',
+  tester: 'Bill',
+  [Symbol.iterator]: function* () {
+    yield this.lead;
+    yield this.tester;
+  }
+}
+
+const engineeringTeam = {
+  testingTeam,
+  size: 3,
+  department: 'Engineering',
+  lead: 'Jill',
+  engineer: 'Dave',
+  manager: 'Alex'
+}
+
+function* TeamIterator(team) {
+  yield team.lead;
+  yield team.engineer; 
+  yield* team.testingTeam;
+}
+
+const names = [];
+for (let name of TeamIterator(engineeringTeam)) {
+  names.push(name);
+}
+
+names;
 ```
