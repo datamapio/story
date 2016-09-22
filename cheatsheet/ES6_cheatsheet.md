@@ -208,6 +208,9 @@ Generators, a new feature of ES6, are functions that can be paused and resumed (
 Two important ones are:
 - Implementing iterables
 - Blocking on asynchronous function calls
+
+Attention: Don't use generators and iterators for now. See 11.1 and 11.2
+https://github.com/airbnb/javascript#iterators-and-generators
 ```
 function* colors() {
   yield "red";
@@ -226,9 +229,6 @@ myColors; //["red", "blue", "yellow", "green"]
 See also: http://exploringjs.com/es6/ch_generators.html#_overview-16       
 
 ###Generator Delegation   
-Important: Don't use generators and iterators for now. See 11.1 and 11.2
-https://github.com/airbnb/javascript#iterators-and-generators
-
 ```
 const testingTeam = {
   lead: 'Amanda',
