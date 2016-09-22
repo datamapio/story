@@ -209,7 +209,7 @@ Two important ones are:
 - Implementing iterables
 - Blocking on asynchronous function calls
 
-Attention: Don't use generators and iterators for now. See 11.1 and 11.2
+Attention: Don't use generators and iterators for now. See 11.1 and 11.2     
 https://github.com/airbnb/javascript#iterators-and-generators
 ```
 function* colors() {
