@@ -225,7 +225,10 @@ myColors; //["red", "blue", "yellow", "green"]
 ```
 See also: http://exploringjs.com/es6/ch_generators.html#_overview-16       
 
-###Generator Delegation      
+###Generator Delegation   
+Important: Don't use generators and iterators for now. See 11.1 and 11.2
+https://github.com/airbnb/javascript#iterators-and-generators
+
 ```
 const testingTeam = {
   lead: 'Amanda',
@@ -260,7 +263,7 @@ for (let name of TeamIterator(engineeringTeam)) {
 
 names;
 ```
-###Generator Delegation, Refactored with Symbol.iterator    
+###Generator delegation, refactored with Symbol.iterator    
 
 The Symbol.iterator well-known symbol specifies the default iterator for an object. Used by for...of.      
 ```
