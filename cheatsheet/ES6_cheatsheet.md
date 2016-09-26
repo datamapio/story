@@ -1,5 +1,38 @@
 #ES6 Cheatsheet
-Examples from: https://www.udemy.com/javascript-es6-tutorial/learn/v4/overview
+Most examples from: https://www.udemy.com/javascript-es6-tutorial/learn/v4/overview
+
+##Array Helpers
+
+###Reduce
+From [Egghead.io](https://egghead.io/lessons/javascript-introducing-reduce-reducing-an-array-into-an-object)
+```
+var votes = [
+  "angular",
+  "react",
+  "react",
+  "angular",
+  "react",
+  "angular",
+  "react",
+  "ember",
+  "vanilla",
+  "react"
+];
+
+var initialValue = {};
+
+var reducer = function(tally, vote) {
+  if(!tally[vote]) {
+    tally[vote] = 1;
+  } else {
+    tally[vote] = tally[vote] + 1;
+  }
+  return tally;
+};
+
+var result = votes.reduce(reducer, initialValue);
+console.log(result);
+```
 
 
 ##Rest and Spread Operator
