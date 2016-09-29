@@ -1,4 +1,6 @@
 #ES6 Cheatsheet
+See also: https://babeljs.io/docs/learn-es2015/     
+     
 Most examples from: https://www.udemy.com/javascript-es6-tutorial/learn/v4/overview
 
 ##Array Helpers
@@ -353,3 +355,6 @@ fetch(url)
   .then(response => response.json())
   .then(data => console.log(data));
 ```
+
+See also:   
+https://babeljs.io/docs/learn-es2015/
