@@ -276,13 +276,15 @@ https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
 ##R Intros
 Hands-on R class        
 http://www.science.smith.edu/~amcnamara/NICAR2016.html   
-http://www.r-tutor.com/elementary-statistics     
+http://www.r-tutor.com/elementary-statistics 
+https://pagepiccinini.com/r-course/    
 ##R Manuals
 https://cran.r-project.org/doc/manuals/r-release/R-intro.html
 ##Regex
 http://regex.danwin.com/slides/
 Regex101 - online regex editor and debugger         
 https://regex101.com/
+
 
 
 
