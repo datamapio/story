@@ -9,13 +9,18 @@ Most examples from: https://www.udemy.com/javascript-es6-tutorial/learn/v4/overv
 A reducer takes an accumulator value and a single value from a collection and computes a new accumulator value.      
 
 In the first example:       
-previous = previousValue or accumulator; trip = currentValue or single value, here an object, from the array; 0 = initialValue      
+previous = previousValue or accumulator;     
+trip = currentValue or single value, here an object, from the array;    
+0 = initialValue        
+
 In the second example:    
-tally = previousValue or accumulator, and vote = currentValue or single value from a collection. Together they form the reducer.        
-           
+tally = previousValue or accumulator and     
+vote = currentValue or single value from a collection. Together they form the reducer.        
+                    
+
 Note: The reduce array helper doesn't need an initialValue.     
 
-Note 2: Redux comes from the Reduce:
+Note 2: The name Redux comes from the Reducers:              
 See: https://github.com/reactjs/redux/issues/514#issuecomment-131232439
 
 ```
