@@ -6,6 +6,26 @@ Most examples from: https://www.udemy.com/javascript-es6-tutorial/learn/v4/overv
 ##Array Helpers
 
 ###Reduce
+A reducer takes an accumulator value and a single value from a collection and computes a new accumulator value.      
+
+In the first example:       
+previous = previousValue or accumulator; trip = currentValue or single value, here an object, from the array; 0 = initialValue      
+In the second example:    
+tally = previousValue or accumulator, and vote = currentValue or single value from a collection. Together they form the reducer.        
+           
+Note: The reduce array helper doesn't need an initialValue.     
+
+Note 2: Redux comes from the Reduce:
+See: https://github.com/reactjs/redux/issues/514#issuecomment-131232439
+
+```
+var trips = [{ distance: 34 }, { distance: 12 } , { distance: 1 }];
+
+var totalDistance = trips.reduce((previous, trip) => {
+    return previous += trip.distance;
+}, 0);
+```
+
 From [Egghead.io](https://egghead.io/lessons/javascript-introducing-reduce-reducing-an-array-into-an-object)
 ```
 var votes = [
@@ -23,6 +43,7 @@ var votes = [
 
 var initialValue = {};
 
+// tally = sum
 var reducer = function(tally, vote) {
   if(!tally[vote]) {
     tally[vote] = 1;
