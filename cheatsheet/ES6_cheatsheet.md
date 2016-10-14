@@ -5,12 +5,11 @@ Most examples from: https://www.udemy.com/javascript-es6-tutorial/learn/v4/overv
 
 ##Array Helpers
 
-###.map vs. forEach
-Array.prototype.map returns an array but Array.prototype.forEach doesn't. So you can manipulate the returned array inside the callback function passed to the map method and then return it.      
+###.map vs .forEach
+Array.prototype.map returns an array, Array.prototype.forEach doesn't. 
+Which means you can chain additional methods when using .map, but no so with .forEach.    
                    
-Array.prototype.forEach only walks through the given array so you can do your stuff while walking the array.           
-                            
-From: http://stackoverflow.com/questions/354909/is-there-a-difference-between-foreach-and-map             
+See also: http://stackoverflow.com/questions/354909/is-there-a-difference-between-foreach-and-map             
 
 ###Reduce
 A reducer takes an accumulator value and a single value from a collection and computes a new accumulator value.      
