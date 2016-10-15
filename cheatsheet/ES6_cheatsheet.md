@@ -30,6 +30,16 @@ var lessThanTen = reject(numbers, function(number){
 
 lessThanTen;
 ```
+If indexOf is confusing, try this first:
+```
+function notInArray(el) { return [10,11,12].indexOf(el); }
+function notInArray2(el) { return [10,11,12].indexOf(el) < 0; }
+notInArray(8);
+notInArray(11);
+notInArray2(8);
+notInArray2(11);
+```
+
 
 ###.reduce
 A reducer takes an accumulator value and a single value from a collection and computes a new accumulator value.      
