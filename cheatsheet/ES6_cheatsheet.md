@@ -9,9 +9,29 @@ Most examples from: https://www.udemy.com/javascript-es6-tutorial/learn/v4/overv
 Array.prototype.map returns an array, Array.prototype.forEach doesn't. 
 Which means you can chain additional methods when using .map, but no so with .forEach.    
                    
-See also: http://stackoverflow.com/questions/354909/is-there-a-difference-between-foreach-and-map             
+See also: http://stackoverflow.com/questions/354909/is-there-a-difference-between-foreach-and-map 
 
-###Reduce
+
+###.filter
+The reject function should result in the opposite of "number >= 10".
+```
+var numbers = [8, 9, 10, 11, 12];
+
+function reject(array, iteratorFunction) {
+  // first filter
+  var res = array.filter(iteratorFunction);  // [10, 11, 12]
+  // reverse filter using the result of the first filter
+  return array.filter(function(element) { return res.indexOf(element) < 0}); // [8, 9]
+}
+
+var lessThanTen = reject(numbers, function(number){
+  return number >= 10;
+}); 
+
+lessThanTen;
+```
+
+###.reduce
 A reducer takes an accumulator value and a single value from a collection and computes a new accumulator value.      
 
 In the first example:       
