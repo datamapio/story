@@ -284,6 +284,8 @@ https://cran.r-project.org/doc/manuals/r-release/R-intro.html
 http://regex.danwin.com/slides/
 Regex101 - online regex editor and debugger         
 https://regex101.com/
+##R apply functions
+https://rstudio-pubs-static.s3.amazonaws.com/84967_12ec13425c82452a8f357ba87a4f641f.html
 
 
 
