@@ -281,6 +281,7 @@ https://pagepiccinini.com/r-course/
 ##R Manuals
 https://cran.r-project.org/doc/manuals/r-release/R-intro.html
 ##Regex
+https://www.rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf
 http://regex.danwin.com/slides/
 Regex101 - online regex editor and debugger         
 https://regex101.com/
