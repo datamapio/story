@@ -60,6 +60,13 @@ library(gdata)
 ext <- read.xls ("ext.xls", sheet = 1, header = TRUE, stringsAsFactors=FALSE)
 
 ```
+###TSV: Subset a dataframe by rows (see more about subsetting resp. selecting rows below)
+```
+## from row 8 to 1205 = 1197, with header=TRUE
+ext <- read.table(file = 'ext20161206.tsv', sep="\t", header = TRUE, skip=7, nrows=1194)
+```
+
+
 ###TopoJSON/GeoJSON
 See more at: https://github.com/ropensci/geojsonio      
       
