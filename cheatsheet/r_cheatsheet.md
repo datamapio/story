@@ -21,6 +21,37 @@ setwd("/Users/username/project")
 ## Check the current working directory with getwd(); similar to pwd (=print working directory) on the console
 getwd()
 ```
+##R Version and Upgrade
+```
+##Use the command "version"
+version 
+
+##Update R
+1. Go to https://cran.cnr.berkeley.edu/ or to CRAN via https://www.r-project.org/
+2. Download the latest version of R (currently 3.2.2)
+3. Install
+4. Restart RStudio
+
+##Update RStudio
+Go to Help > Check for Updates to install newer version.
+
+##Update Packages
+update.packages()
+```
+
+##Install Packages
+```
+install.packages("ggplot2")
+library(ggplot2)
+
+##Some problems with ggplot2 have been reported, this can be solved by installing lazyeval
+install.packages(“lazyeval”)
+
+##Installing Tidyverse (e.g. dplyr, purrr, tidyr, ggplot2)
+install.packages("tidyverse")
+library(tidyverse)
+tidyverse_update()
+```
 
 ##Downloading and reading files
 
