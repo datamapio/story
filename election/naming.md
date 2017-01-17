@@ -7,20 +7,70 @@ This goes from keeping variable/column names as small as possible (e.g. prop_a_y
 The first and canonical version is in english, translations in other languages are highly welcome.
 
 
+##Data Process
+1. Import EXT 
+2. Tidy EXT 
+3. Merge EXT and REF = DATA 
+4. Transform DATA
+5. SMALL DATA (drop unused columns)
+
+
+In more detail:       
+1. Tidy EXT       
+- cleaned data         
+- with no added columns (eg.  no % column when there is no % column in the EXT)       
+
+4. Transform DATA       
+- Computed Variables / Columns (e.g. %)   
+- Computed Observations (e.g. Totals = vbm and elec_day together)
+- Subsetting the data (take only a sample)
+- Normalizing data (divide car accidents by population)
+
+5. SMALL DATA     
+- Drop columns (when not needed in the visualization)      
+Maybe this can be automated. The columns not used get highlighted and one can drop them individually or all together? (edited) 
+
+
+
 ##Column/Variables Names in csv
-Real Life Examples
+With Real Life Examples
 
 ###Proposal
 
-####EXT -> DATA (before transformation)
+####EXT -> DATA (before merge with REF)
 #####Variables
-- id (= GeoID)
-- precinct_id / fips / ...
+- precinct_id / fips / gdenr / gdename
 - registered
-- ballots_cast = ballots cast total; ballots_cast_vbm = ballots cast vote by mail; ballots_cast_elecday = ballots cast on election day
+- ballots_cast = ballots_cast are always ballots cast in total!
+  Otherwise use: ballots_cast_vbm = ballots cast, vote by mail; ballots_cast_elecday = ballots cast on election day
 - turnout (always in %)
+- writein = write-in, but written together
+- undervote
+- overvote
+
+Abbreviations:
+- ini for Initiative
+- ref for Referendum
+- prop for Proposition
+- measure for Measure
+
+#####Guidelines
+- one csv per measure or prop or referendum or initiative (try to use words used)
+  Eg. prop_f (Proposition F), measure_g (Measure G), ini_m (Iniatiative M), ref_b (Referendum B) etc.  
+- If the names are long, create an extra sheet to translate: e.g. 
+  ini_m = mariage initative = Volksinitiative «Für Ehe und Familie - gegen die Heiratsstrafe» ; 
+- Always use precinct_id, registered, ballots_cast, turnout to individual csv's
+- Some will have vote by mail, some don't. ballots_cast is always the total
+- Some will show under- and overvote, some don't     
+- Use last name of candidates (if possible confusion, use last name plus first name initial)
 
 
+####DATA (after merge with REF)
+- Add sum's and % columns as needed
+- Create subsets if needed
+
+#####Guidelines
+- Sum up all candidates and write-ins, do not count under- and overvotes, to get to % of candidates
 
 
 ###Transformed EXT (with percentages)
