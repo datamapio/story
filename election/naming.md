@@ -16,17 +16,17 @@ The first and canonical version is in english, translations in other languages a
 
 
 In more detail:       
-1. Tidy EXT       
+Point 1. Tidy EXT       
 - cleaned data         
 - with no added columns (eg.  no % column when there is no % column in the EXT)       
 
-4. Transform DATA       
+Point 4. Transform DATA       
 - Computed Variables / Columns (e.g. %)   
 - Computed Observations (e.g. Totals = vbm and elec_day together)
 - Subsetting the data (take only a sample)
 - Normalizing data (divide car accidents by population)
 
-5. SMALL DATA     
+Point 5. SMALL DATA     
 - Drop columns (when not needed in the visualization)      
 Maybe this can be automated. The columns not used get highlighted and one can drop them individually or all together? (edited) 
 
