@@ -8,8 +8,65 @@ The first and canonical version is in english, translations in other languages a
 
 
 ##Column/Variables Names in csv
+Real Life Examples
 
-###Real Life Examples
+###Proposal
+
+####EXT -> DATA (before transformation)
+#####Variables
+- id (= GeoID)
+- precinct_id / fips / ...
+- registered
+- ballots_cast = ballots cast total; ballots_cast_vbm = ballots cast vote by mail; ballots_cast_elecday = ballots cast on election day
+- turnout (always in %)
+
+
+
+
+###Transformed EXT (with percentages)
+[Alameda Separated](https://github.com/datamapio/US/blob/master/precinct/california/alameda/EXT/alameda_precinct_presidental_separated_20161122.csv)
+[Alameda Totals](https://github.com/datamapio/US/blob/master/precinct/california/alameda/EXT/alameda_precinct_presidental_total_20161122.csv)
+```
+precinct_id 
+registered_total  
+ballots_cast_total  
+turnout_total 
+clinton_total 
+johnson_total 
+lariva_total  
+stein_total 
+trump_total 
+writein_total 
+overvote_total  
+undervote_total 
+clinton_total_pct 
+johnson_total_pct 
+lariva_total_pct  
+stein_total_pct 
+trump_total_pct 
+writein_total_pct 
+overvote_total_pct  
+undervote_total_pct
+```
+
+###Tidy EXT (without percentages)
+[Amador County](https://github.com/datamapio/US/blob/master/precinct/california/amador/EXT/amador_precinct_presidental_total_20161206.csv)     
+```
+precinct_id 
+registered  
+ballots_cast  
+turnout 
+stein 
+clinton 
+lariva  
+trump 
+johnson 
+writein 
+cand_with_writein (summary)
+```
+
+
+###Switzerland
 
 From the Swiss Statistics Office:
 ```
