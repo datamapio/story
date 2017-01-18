@@ -9,14 +9,18 @@ The first and canonical version is in english, translations in other languages a
 
 ##Data Process
 1. Import EXT 
-2. Tidy EXT 
+2. Tidy EXT in wide format (see: [tidy](http://vita.had.co.nz/papers/tidy-data.pdf) and [long and wide format](http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/))        
+   - TIDY_EXT_...(what is recommended)
+   - WIDE_EXT... (what we use)
 3. Merge EXT and REF = DATA 
 4. Transform DATA
 5. SMALL DATA (drop unused columns)
 
 
 In more detail:       
-Point 1. Tidy EXT       
+Point 2. Tidy EXT    
+- We use the wide format, not the long format. It would be fully tidy if we had "candidate" and "votes", but that would mean we have the precinct_id multiple times. Question is: should we always make a tidy version too? And             
+  http://www.prometheusresearch.com/good-data-management-practices-for-data-analysis-tidy-data-part-2/              
 - cleaned data         
 - with no added columns (eg.  no % column when there is no % column in the EXT)       
 
@@ -41,12 +45,15 @@ With Real Life Examples
 #####Variables
 - precinct_id / fips / gdenr / gdename
 - registered
-- ballots_cast = ballots_cast are always ballots cast in total!
+- ballots_cast = ballots_cast are always ballots cast in total!               
   Otherwise use: ballots_cast_vbm = ballots cast, vote by mail; ballots_cast_elecday = ballots cast on election day
 - turnout (always in %)
+- valid = valid ballots or valid votes (without under- and overvotes, but with write-ins)
 - writein = write-in, but written together
 - undervote
 - overvote
+- candidate
+- votes
 
 Abbreviations:
 - ini for Initiative
@@ -122,10 +129,10 @@ From the Swiss Statistics Office:
 ```
 ## X.1 = Gemeindenummer (gdenr)
 ## X.2. = Gemeindename (gdename)
-## X.3 = Stimmberechtigte = entitled_to_vote
-## X.4 = Abgegebene Stimmen = votes_cast
+## X.3 = Stimmberechtigte = entitled_to_vote / registered
+## X.4 = Abgegebene Stimmen = votes_cast / ballots_cast
 ## X.5 = Stimmbeteiligung = turnout
-## X.6 = Gültige Stimmen = valid_votes
+## X.6 = Gültige Stimmen = valid_votes / valid 
 ## X.7 = JA-Stimmen = yes
 ## X.8 = NEIN-Stimmen = no
 ## X.9 = JA-Stimmen in Prozent = yes_percentage
