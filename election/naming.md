@@ -47,14 +47,16 @@ With Real Life Examples
 - precinct_name
 - precinct_split_name (=split_name)
 - precinct_split_id
+- parent_precinct_id (see SF)
+- neighborhood (there might be other boundaries like congressional districts etc)
 - contest_id
 - contest_title (e.g. PRESIDENT AND VICE PRESIDENT)
 - choice_id
 - choice_name (Yes or No)
 - choice_party
 - candidate_id
-- candidate_name
-- candidate_type (C (candidate) or W (write-in))
+- candidate_name (or candidate)
+- candidate_type (e.g. C (candidate) or W (write-in))
 - candidate_party
 - registered
 - ballots_cast = ballots_cast are always ballots cast in total!               
@@ -73,6 +75,7 @@ For TIDY_WIDE, use last name, see guidelines
 
 
 Abbreviations:
+- pct for percentage (PCT only used in GeoID)
 - ini for Initiative
 - ref for Referendum
 - prop for Proposition
@@ -137,6 +140,13 @@ trump
 johnson 
 writein 
 cand_with_writein (summary)
+```
+
+San Francisco
+```
+##id                pct_2012    precinct_names  neighborhood    yes_percentage  parent_id
+##84006075PCT1106   1106        Pct 1106/1107   INGLESIDE       0.43            NA
+##84006075PCT1107   1107        NA              INGLESIDE       NA              84006075PCT1106
 ```
 
 San Mateo
