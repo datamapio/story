@@ -44,6 +44,18 @@ With Real Life Examples
 ####EXT -> DATA (before merge with REF)
 #####Variables
 - precinct_id / fips / gdenr / gdename
+- precinct_name
+- precinct_split_name (=split_name)
+- precinct_split_id
+- contest_id
+- contest_title (e.g. PRESIDENT AND VICE PRESIDENT)
+- choice_id
+- choice_name (Yes or No)
+- choice_party
+- candidate_id
+- candidate_name
+- candidate_type (C (candidate) or W (write-in))
+- candidate_party
 - registered
 - ballots_cast = ballots_cast are always ballots cast in total!               
   Otherwise use: ballots_cast_vbm = ballots cast, vote by mail; ballots_cast_elecday = ballots cast on election day
@@ -52,8 +64,13 @@ With Real Life Examples
 - writein = write-in, but written together
 - undervote
 - overvote
-- candidate
+- type: vbm (Vote by Mail, Absentee Votes), elecday (Election Day, Election_Votes), early (Early_Votes)
 - votes
+- reporting (e.g. 1, seen in San Mateo)
+
+For humans use candidate_name (Hillary Clinton), for props use choice_name (Yes or No)        
+For TIDY_WIDE, use last name, see guidelines
+
 
 Abbreviations:
 - ini for Initiative
@@ -69,7 +86,7 @@ Abbreviations:
 - Always use precinct_id, registered, ballots_cast, turnout to individual csv's
 - Some will have vote by mail, some don't. ballots_cast is always the total
 - Some will show under- and overvote, some don't     
-- Use last name of candidates (if possible confusion, use last name plus first name initial)
+- Use last name of candidates (if possible confusion, use last name plus first name initial or full first name)
 
 
 ####DATA (after merge with REF)
@@ -120,6 +137,14 @@ trump
 johnson 
 writein 
 cand_with_writein (summary)
+```
+
+San Mateo
+```
+[1] "Precinct_Name"    "Split_Name"       "precinct_splitId" "Reg_voters"       "Ballots"         
+[6] "Reporting"        "Contest_id"       "Contest_title"    "Contest_party"    "Choice_id"       
+[11] "Candidate_name"   "Choice_party"     "Candidate_Type"   "Absentee_votes"   "Early_votes"     
+[16] "Election_Votes" 
 ```
 
 
