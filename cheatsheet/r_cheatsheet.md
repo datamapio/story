@@ -131,6 +131,32 @@ search_pattern <- grepl(pattern = "word", x = ext$column1)
 ext_searched <- ext[search_pattern, ]
 ```
 
+##Change to numeric or to character
+```
+##Make column 2 to 11 numeric
+ext8[, 2:11] <- sapply(ext8[, 2:11], as.numeric )
+
+##Make id column as character
+ext8$precinct_id <- sapply(ext8$precinct_id, as.character)
+```
+Alternative: Convert to numeric
+```
+## Choose cols to convert to numeric
+cols <- ext2[, c(4:17)]
+
+## Function convert.magic
+convert.magic <- function(obj, type){
+  FUN1 <- switch(type,
+                 character = as.character,
+                 numeric = as.numeric,
+                 factor = as.factor)
+  out <- lapply(obj, FUN1)
+  as.data.frame(out)
+}
+
+##Convert and assign
+ext2[, c(4:17)] <- convert.magic(cols, "numeric")
+```
 
 ##Adding, pasting & trimming
 
@@ -149,6 +175,11 @@ ext$county_fips <- str_pad(ext2$FIPS.Code, width=3, pad = "0")
 ## County FIPS = 3 numeric (e.g. 001)
 ## Result: 84006001
 data$id <- paste("840", data$state_fips, data$county_fips, sep="")
+```
+###Put id first
+```
+## Put id as first column
+newdf <- df %>% select(id, everything())
 ```
 
 ###Trim leading and trailing spaces
