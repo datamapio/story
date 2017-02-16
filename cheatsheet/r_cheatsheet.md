@@ -182,6 +182,39 @@ ext[, c(3:9)] <- x
 See also: https://www.datacamp.com/community/tutorials/r-tutorial-apply-family
 
 
+##Comparing Dataframes or Columns of Datamframes
+###Anti-join
+From: [REF for Butte County](https://github.com/datamapio/US/blob/master/precinct/california/butte/REF/create_REF_butte_precinct.R)
+```
+## select the column to compare
+library (plyr)
+m <- map$PRECINCT
+m <- ldply (m, data.frame)
+pe <- preelec$regular_pct
+pe <- ldply (pe, data.frame)
+
+## compare from both sides, as you will get different results
+require(dplyr) 
+anti_join(m,pe)
+anti_join(pe,m) 
+```
+
+And semi_join to filter rows in a1 that are also in a2
+```
+semi_join(a1,a2)
+```
+
+###Search for Duplicates
+```
+## First checking for uniques
+map_unique <- unique(m) #545 instead of 563
+
+## Then find the duplicates
+duplicated <- duplicated(m)
+d <- m[duplicated, ] #18
+```
+
+
 ##Merging (horizontal) and Stacking (vertical)
 ###Merge REF and EXT by common identifier (horizontal)
 ```
@@ -325,6 +358,9 @@ Regex101 - online regex editor and debugger
 https://regex101.com/
 ##R apply functions
 https://rstudio-pubs-static.s3.amazonaws.com/84967_12ec13425c82452a8f357ba87a4f641f.html
+
+##dplyr Set operations (setdiff, union, intersect)
+https://rdrr.io/cran/dplyr/man/setops.html
 
 
 
