@@ -170,7 +170,11 @@ https://gka.github.io/palettes/
 
 See also:              
 For the problem of city, county, state names over colors (e.g. https://elections.datamap.io/us/2016/11/02/electoral_college_forecast)
-https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=B3EFFF&v=00CFFF&v=046B99&v=1C304A&v=000000 and https://brand-html-color-matrix.apps.cloud.gov/visual-style/#colors     
+https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=B3EFFF&v=00CFFF&v=046B99&v=1C304A&v=000000 and https://brand-html-color-matrix.apps.cloud.gov/visual-style/#colors  
+
+And:    
+https://colorme.io/       
+http://jim-nielsen.com/sassme/          
 
 ####5.3. Scales
 https://github.com/d3/d3-scale             
