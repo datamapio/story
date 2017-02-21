@@ -12,7 +12,7 @@ The first and canonical version is in english, translations in other languages a
 2. Tidy EXT in wide format (see: [tidy](http://vita.had.co.nz/papers/tidy-data.pdf) and [long and wide format](http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/))        
    - TIDY_EXT_...(what is recommended)
    - WIDE_EXT... (what we use)
-3. Merge EXT and REF = DATA 
+3. Merge EXT and REF = DATA (= WIDE_DATA)
 4. Transform DATA
 5. SMALL DATA (drop unused columns)
 
@@ -252,12 +252,12 @@ optional arguments:
 ##Proposal
 
 ###Percentage
-Abbreviation: PCT    
+Abbreviation: pct (not to confound with PCT (=Precinct) in GeoID)    
 Variable Suffix: _pct    
-Example: r_yes_pct = Proposition R, Yes Percentage     
+Example: prop_r_yes_pct = Proposition R, Yes Percentage     
 
 
-###Ballot Measure, Proposition, Prop
+###Ballot Measure, Proposition, Prop, Initiative, Referendum
 https://en.wikipedia.org/wiki/Ballot_measure   
 Giving a proposition a letter of the alphabet is easy, but how to differentiate between different props (local, national)?
 In Switzerland, there are often national, cantonal, district and municipality props on the agenda.
