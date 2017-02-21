@@ -93,10 +93,57 @@ Here is even a map where to vote:
 http://traviselectionresults.com/enr/locations/display.do?criteria.electionId=201611&electionId=201611&tabType=C         
 
 
-####1.1. Excel Download from here
+####1.1. Excel Download for manual inspection
 http://traviselectionresults.com/enr/reports/display.do?criteria.electionId=201611&electionId=201611&tabType=C
 
-[Excel only for President](TravisCountyElections_canvass_201611-140--2100195909.xls)
+[Excel only for President](https://github.com/datamapio/story/blob/master/election/travis/TravisCountyElections_canvass_201611-140--2100195909.xls)
+
+####Precinct Template Form in Wide Form (ideal for Map Visualizations, till we find a better way. Still open to debate)
+Wide and Long Form, see: https://stanford.edu/~ejdemyr/r-tutorials/wide-and-long/              
+
+General Template:
+```
+## CASE A: only totals are available
+## precinct_id | precinct_name | registered | ballots_cast | turnout | valid | clinton | trump | 
+## 1001        | precint 1001  |        100 |           80 |   80.00 |    70 |      35 |    35 |       
+## 1002        | precint 1002  |        200 |          160 |   80.00 |   150 |      80 |    70 |          
+##
+## CASE B: totals and subtotals are available (elecday, vbm, early, absentee)
+## precinct_id | precinct_name | registered | ballots_cast | turnout | valid | clinton | clinton_elecday | clinton_vbm | clinton_early |
+## 1001        | precint 1001  |        100 |           80 |   80.00 |    70 |      35 |              25 |           5 |             5 |
+## 1002        | precint 1002  |        200 |          160 |   80.00 |   150 |      80 |              50 |          20 |            10 |
+```
+
+Applied to Travis Data, you will have:     
+                     
+Name of future file: EXT_MASTER_presidential_travis_precinct_20161121.csv              
+EXT_MASTER = file with all the data,
+EXT_ = EXT BASE, the file only with totals.   
+There should be 247 rows/observations            
+        
+```
+## precinct_id | precinct_name | registered | ballots_cast | turnout | valid | trump_vbm | trump_early | trump_elecday | trump |
+## 101         | Precint 101   |       5622 |         3337 |     	 |       |        21 |         326 |           180 |   527 |
+```
+- precinct_id = Precinct (XLS)
+- precinct_name = "Precinct " + Precinct (XLS)
+- registered = Registered Voters (XLS)
+- ballots_cast = Total Ballots (XLS)
+- turnout = ballots_cast / registered * 100; most of the time available
+- valid = candidates and write-ins, but without under- and overvotes; most of the time this is available
+- trump = total of vbm, early and elecday 
+  (we use the last name of the presidential candidate or last name plus first letter of first name in case of confusion)
+- writein = write-in
+- overvote, undervote
+
+
+####1.2. Excel Download in R
+We do all this in R (including the download onwards), so that it is reproducible and it is easier to correct data.
+
+
+
+
+
 
 
 
