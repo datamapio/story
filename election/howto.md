@@ -3,8 +3,8 @@
 ##DEFINITIONS
 - GeoID = a global id for every polygon on Datamap (e.g. 84006 for California)
 - EXT = External Data
+- REF = Map Reference File (features from the Map combined with relevant external data)
 - MAP = TopoJSON (mostly derived from a shapefile)
-- REF = Reference File
 - DATA = EXT + REF combined
 - VIZ
 
@@ -36,7 +36,7 @@
 
 ##Example:
 
-###1
+###1. 
 http://traviselectionresults.com/enr/archives/display.do?criteria.electionId=20121106&electionId=20121106&tabType=C
 
 http://traviselectionresults.com/enr/results/display.do?criteria.electionId=201611&electionId=0&tabType=C&criteriaId=-1&formSubmitted=1
@@ -142,7 +142,45 @@ We do all this in R (including the download onwards), so that it is reproducible
 
 
 
+###2. REF
+Check: Precinct Summary
+http://www.traviscountyclerk.org/eclerk/Content.do?code=E.40
+Via: http://www.votetravis.com/vexpress/display.do
 
++ CSV Export from Precinct Map 2012 with Mapshaper
+
+
+###3. MAP
+https://tax-office.traviscountytx.gov/voters/jurisdiction-maps
+
+[PDF](https://tax-office.traviscountytx.gov/images/tax_assessor/pdfs/voters/maps/VR_TravisCountyPrecincts.pdf)
+[Shapefile 2012 via Google](https://groups.google.com/forum/#!msg/openaustin/05WFo9uUo_E/peyQp3zohrEJ)       
+
+
+###4. DATA
+
+###5. VIZ
+We use the following template:
+https://elections.datamap.io/us/2016/11/08/presidential/precinct/by_state/california/by_county/alameda
+
+####5.1. d3.js
+####5.2. Color palette
+Starting point: http://colorbrewer2.org/        
+https://gka.github.io/palettes/       
+
+See also:              
+For the problem of city, county, state names over colors (e.g. https://elections.datamap.io/us/2016/11/02/electoral_college_forecast)
+https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=B3EFFF&v=00CFFF&v=046B99&v=1C304A&v=000000 and https://brand-html-color-matrix.apps.cloud.gov/visual-style/#colors     
+
+####5.3. Scales
+https://github.com/d3/d3-scale
+https://github.com/d3/d3/blob/master/API.md#scales-d3-scale
+
+
+
+##Misc 
+See also:     
+https://github.com/open-austin/voteatx-app             
 
 
 
