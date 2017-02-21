@@ -8,6 +8,10 @@
 - DATA = EXT + REF combined
 - VIZ
 
+
+##GeoID
+Example: 84048453PCT101
+
 ##Mapping Election Data by Precinct
 
 ###STEP 1: EXT
@@ -148,22 +152,21 @@ http://www.traviscountyclerk.org/eclerk/Content.do?code=E.40
 Via: http://www.votetravis.com/vexpress/display.do
 
 + CSV Export from Precinct Map 2012 with Mapshaper       
-
+            
+- cntCBlk = Count C Block ? Something to do with the Census Blocks? https://en.wikipedia.org/wiki/Census_block_group
 - VAP: Voting-Age Population        
 - Anglo
 - Hisp
 - BH = Black Hispanic ? Or Asian?
 - Black
 - Other
-
-Compare to: http://texasalmanac.com/topics/government/travis-county:         
+             
+Compare to: http://texasalmanac.com/topics/government/travis-county:              
 Race/Ethnicity: (In percent) Anglo, 49.8; Black, 9.5; Hispanic, 33.7; Asian, 7.2; Other, 2.6      
-      
-http://www.census.gov/quickfacts/table/PST045216/48453,00      
-
-
-
-
+http://www.census.gov/quickfacts/table/PST045216/48453,00             
+                   
+See also:
+ftp://ftp.ci.austin.tx.us/GIS-Data/Regional/coa_gis.html               
 
 
 ###3. MAP
