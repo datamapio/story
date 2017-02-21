@@ -205,6 +205,8 @@ https://github.com/d3/d3/blob/master/API.md#scales-d3-scale
 See also:     
 https://github.com/open-austin/voteatx-app             
 
+###House Pricing in Travis
+http://www.jsg.utexas.edu/helper/files/EstradaS2014.pdf
 
 
 
