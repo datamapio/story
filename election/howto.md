@@ -36,7 +36,7 @@
 
 ##Example:
 
-###1. 
+###1. EXT 
 http://traviselectionresults.com/enr/archives/display.do?criteria.electionId=20121106&electionId=20121106&tabType=C
 
 http://traviselectionresults.com/enr/results/display.do?criteria.electionId=201611&electionId=0&tabType=C&criteriaId=-1&formSubmitted=1
@@ -173,7 +173,7 @@ For the problem of city, county, state names over colors (e.g. https://elections
 https://toolness.github.io/accessible-color-matrix/?n=white&n=light&n=bright&n=medium&n=dark&n=black&v=FFFFFF&v=B3EFFF&v=00CFFF&v=046B99&v=1C304A&v=000000 and https://brand-html-color-matrix.apps.cloud.gov/visual-style/#colors     
 
 ####5.3. Scales
-https://github.com/d3/d3-scale
+https://github.com/d3/d3-scale             
 https://github.com/d3/d3/blob/master/API.md#scales-d3-scale
 
 
