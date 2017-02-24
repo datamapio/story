@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <title>Austin</title>
+<style>
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    color: #272a2f;
+}
+
+#mapcanvas {
+  width: 960px;
+  height: 600px;
+  margin: 10px 10px 10px 10px;
+  /*padding: 5px 5px 5px 5px;*/
+  border: 0.5px solid #555;
+
+}
+  
+p {
+   margin: 10px 10px 10px 10px;
+  }
+.precinct {
+  fill: #555;
+}
+
+.precinct-boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: none;
+}
+
+</style>
+
+<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div id="mapcanvas" ></div> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+
+<script>
+
+// https://github.com/datamapio/story/blob/master/tutorial_20160201.md
+// https://github.com/datamapio/story/blob/master/tutorial_20160201.md#open-the-visualization-with-a-local-or-remote-server
+// Start up the server: http-server -p 8008 &
+
+
+var width = 960,
+    height = 600;
+
+// PROJECTION   
+
+
+// You can also center the map on: -122.51494800050519,37.70813100002812 like in the TopoJSON
+/*var projection = d3.geo.conicConformal() 
+    .rotate([0, 0, 0])  
+    .center([-122.433701, 37.767683])
+    .scale(235000)
+    .parallels([37.06666666666667, 38.43333333333333])
+    .translate([width / 2, height / 2])
+    .precision(.1);*/
+
+// MERCATOR
+var projection = d3.geo.mercator()
+    .center([-122.433701, 37.767683])
+    .scale(211000)
+    .translate([width / 2, 310]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select("#mapcanvas").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+// Title inside the Map
+svg.append("text")
+    .attr("x", "50")             
+    .attr("y", "29")
+    .attr("text-anchor", "start")  
+    .style("font-size", "16px") 
+    .style("text-decoration", "none")  
+    .text("Austin Precincts");
+
+queue()
+      .defer(d3.json, 'travis_precinct_2012.topojson')               
+      //.defer(d3.csv, 'travis_precinct_2012.csv') // REF
+      .await(ready);
+
+//function ready(error, MAP, REF) {
+function ready(error, MAP) {
+  if (error) throw error; 
+  //console.log(MAP)  
+  //console.log(REF)   
+
+  //var precincts = topojson.feature(MAP, MAP.objects.precinct);  
+  var precincts = topojson.feature(MAP, MAP.objects.VTD2012a);  
+  console.log("PRECINCTS: ", precincts);
+
+  svg.append("g")
+      .attr("class", "precinct")
+      .selectAll("path")
+      .data(precincts.features)
+      .enter()
+      .append("path")
+      .attr("d", path)
+      //.append('svg:title').text(function(d) {        
+      //   return ("GeoID: " + d.id); });
+
+  //Borders 
+  svg.append("path")
+      //.datum(topojson.mesh(MAP, MAP.objects.precinct, function(a, b) { return a !== b; }))
+      .datum(topojson.mesh(MAP, MAP.objects.VTD2012a, function(a, b) { return a !== b; }))
+      .attr("class", "precinct-boundary")
+      .attr("d", path); 
+ 
+};
+
+</script>
+  <p>Let us know about your needs at <a href="https://www.datamap.io/contact">https://www.datamap.io/contact</a></p>
+</html>
