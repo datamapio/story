@@ -1,4 +1,4 @@
-#R Cheatsheet
+# R Cheatsheet
 
 ## Datamap = Map + Data + Viz
 <a href="http://www.datamap.io">Datamap</a> is all about separation of concerns. 
@@ -124,7 +124,7 @@ file <- "yourfile.topojson"
 tjson <- topojson_read(file)
 ```
 
-##Pattern Searching (grep, grepl)
+## Pattern Searching (grep, grepl)
 ```
 ## Searching in rows for "word" in Column 1 of data frame ext
 search_pattern <- grepl(pattern = "word", x = ext$column1)
@@ -180,7 +180,7 @@ data$id <- paste("840", data$state_fips, data$county_fips, sep="")
 ```
 ## Put id as first column
 newdf <- df %>% select(id, everything())
-``
+```
 
 ### Trim leading and trailing spaces
 
