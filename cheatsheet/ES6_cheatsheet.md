@@ -1,18 +1,18 @@
-#ES6 Cheatsheet
+# ES6 Cheatsheet
 See also: https://babeljs.io/docs/learn-es2015/     
      
 Most examples from: https://www.udemy.com/javascript-es6-tutorial/learn/v4/overview
 
-##Array Helpers
+## Array Helpers
 
-###.map vs .forEach
+### .map vs .forEach
 Array.prototype.map returns an array, Array.prototype.forEach doesn't. 
 Which means you can chain additional methods when using .map, but no so with .forEach.    
                    
 See also: http://stackoverflow.com/questions/354909/is-there-a-difference-between-foreach-and-map 
 
 
-###.filter
+### .filter
 The reject function should result in the opposite of "number >= 10".
 ```
 var numbers = [8, 9, 10, 11, 12];
@@ -41,7 +41,7 @@ notInArray2(11);
 ```
 
 
-###.reduce
+### .reduce
 A reducer takes an accumulator value and a single value from a collection and computes a new accumulator value.      
 
 In the first example:       
@@ -99,7 +99,7 @@ console.log(result);
 ```
 
 
-##Rest and Spread Operator
+## Rest and Spread Operator
 ```
 // Rest Operator
 function validateShoppingList(...items) {
@@ -134,7 +134,7 @@ Rest: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Function
 Spread: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
 
 
-##Destructuring
+## Destructuring
 Example
 ```
 var expense = {
@@ -267,7 +267,7 @@ const classesAsObject = classes.map(([subject, time, teacher]) => {
 
 classesAsObject;
 ```
-##Classes
+## Classes
 ```
 class Car {
   constructor({ title }) {
@@ -299,7 +299,7 @@ tesla.drive();
 ```
 See also: https://scotch.io/tutorials/better-javascript-with-es6-pt-ii-a-deep-dive-into-classes
 
-##Generators
+## Generators
 Generators, a new feature of ES6, are functions that can be paused and resumed (think cooperative multitasking or coroutines). That helps with many applications. 
 
 Two important ones are:
@@ -325,7 +325,7 @@ myColors; //["red", "blue", "yellow", "green"]
 ```
 See also: http://exploringjs.com/es6/ch_generators.html#_overview-16       
 
-###Generator Delegation   
+### Generator Delegation   
 ```
 const testingTeam = {
   lead: 'Amanda',
@@ -360,7 +360,7 @@ for (let name of TeamIterator(engineeringTeam)) {
 
 names;
 ```
-###Generator delegation, refactored with Symbol.iterator    
+### Generator delegation, refactored with Symbol.iterator    
 
 The Symbol.iterator well-known symbol specifies the default iterator for an object. Used by for...of.      
 ```
@@ -394,7 +394,7 @@ for (let name of engineeringTeam) {
 
 names;
 ```
-##Promises
+## Promises
 ```
 promise = new Promise( (resolve, reject) => {
   setTimeout(() => {
@@ -408,7 +408,7 @@ promise
   .then(() => console.log("I was also ran"))
   .catch(() => console.log("Not cool"));
   ```
-###Fetch
+### Fetch
 Stephen talks about the shortcomings of the native fetch (no catch when there is a 404 status) and recommends to use libraries like Axios.
 ```
 url = 'https://jsonplaceholder.typicode.com/posts/';
