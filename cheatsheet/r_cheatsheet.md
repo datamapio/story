@@ -72,7 +72,26 @@ ext <- read.csv ("ext.csv", header = TRUE, sep = ",", stringsAsFactors=FALSE)
 dim(ext)
 ```
 ### Excel
-More about [gdata](http://www.r-bloggers.com/importing-data-directly-from-ms-excel/)
+NEW: Use [readxl](https://cran.r-project.org/web/packages/readxl/readxl.pdf), as it is much better in handling encodings.      
+Just be aware that it works a bit differently than gdata.               
+        
+## fileUrl = download URL; destfile = local file name, e.g. ext.xls
+fileUrl <- "http://www.data.com/file.xls"            
+download.file(fileUrl, destfile = "ext.xls", method = "curl")        
+
+## Always document the time of the download as the file content or location might change        
+dateDownloaded <- date()        
+dateDownloaded           
+
+## Install gdata
+install.packages("readxl")           
+library(readxl)       
+          
+excel_sheets("ext.xls")          
+ext <- read_excel("ext.xls", skip=1, col_names = TRUE, sheet = "sheet1", stringsAsFactors = FALSE)         
+        
+         
+OLD: More about [gdata](http://www.r-bloggers.com/importing-data-directly-from-ms-excel/)
 
 ```
 ## fileUrl = download URL; destfile = local file name, e.g. ext.xls
