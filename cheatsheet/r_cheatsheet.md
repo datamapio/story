@@ -408,7 +408,10 @@ http://regex.danwin.com/slides/
 Regex101 - online regex editor and debugger            
 https://regex101.com/
 ## R apply functions
-https://rstudio-pubs-static.s3.amazonaws.com/84967_12ec13425c82452a8f357ba87a4f641f.html            
+https://rstudio-pubs-static.s3.amazonaws.com/84967_12ec13425c82452a8f357ba87a4f641f.html    
+
+## Data Cleaning with R (Statistics Netherlands)
+https://cran.r-project.org/doc/contrib/de_Jonge+van_der_Loo-Introduction_to_data_cleaning_with_R.pdf        
 
 ## dplyr Set operations (setdiff, union, intersect)
 https://rdrr.io/cran/dplyr/man/setops.html            
