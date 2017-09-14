@@ -268,7 +268,7 @@ d <- m[duplicated, ] #18
 
 ## Merging (horizontal) and Stacking (vertical)
 
-## Checking for the difference of two dataframes before merging (with dplyr)
+### Checking for the difference of two dataframes before merging (with dplyr)
 ```
 anti_join(a1,a2)
 ```
