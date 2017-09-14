@@ -267,6 +267,13 @@ d <- m[duplicated, ] #18
 
 
 ## Merging (horizontal) and Stacking (vertical)
+
+## Checking for the difference of two dataframes before merging (with dplyr)
+```
+anti_join(a1,a2)
+```
+See also: [compare etc.](https://stackoverflow.com/questions/3171426/compare-two-data-frames-to-find-the-rows-in-data-frame-1-that-are-not-present-in)        
+
 ### Merge REF and EXT by common identifier (horizontal)
 ```
 ## Adding the colums of ext to ref, ext and ref need to have the same identifier (id)
