@@ -8,7 +8,7 @@ https://www.pgadmin.org/
 https://eggerapps.at/postico/
 http://www.macpostgresclient.com/SQLProPostgres
 
-## psql (Command Line): Import csv into a table
+## psql: Import csv into a table (command line)
 Can be started from Postgres.app
 Important if you want to copy a csv file into your table
 
@@ -16,14 +16,17 @@ Important if you want to copy a csv file into your table
 copy ch01.restaurants_staging
  FROM '/data/restaurants.csv' DELIMITER as ',';
 ```
-     
+Here we copy the restaurants.csv into the table ch01.restaurants_staging       
 
-## pgsql2shp (Command Line): Import shapefiles into a table
+
+## pgsql2shp: Import shapefiles into a table (command line)
 You need it if you want to import Shapefiles into Postgres           
 http://www.bostongis.com/pgsql2shp_shp2pgsql_quickguide.bqg        
 
+
 ## OpenGeoSuite
 http://katiekowalsky.me/posts/2015/03/25/shapefile-importer.html
+https://connect.boundlessgeo.com/docs/suite/4.8/intro/whatis.html
 
 
 ## PostGIS in Action
