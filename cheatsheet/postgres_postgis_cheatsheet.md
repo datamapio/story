@@ -21,7 +21,14 @@ Here we copy the restaurants.csv into the table ch01.restaurants_staging
 
 ## pgsql2shp: Import shapefiles into a table (command line)
 You need it if you want to import Shapefiles into Postgres           
-http://www.bostongis.com/pgsql2shp_shp2pgsql_quickguide.bqg        
+http://www.bostongis.com/pgsql2shp_shp2pgsql_quickguide.bqg  
+
+```
+shp2pgsql -s 4269:2163 -g geom
+ -I /data/roadtrl020.shp ch01.highways_staging
+| psql -h localhost -U postgres -p 5432 -d postgis_in_action    
+```
+PS: You don't need to create the table ch01.highways_staging beforehand. It will be created while importing the shapefile.
 
 
 ## ORM for Node
