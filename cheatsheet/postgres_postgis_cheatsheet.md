@@ -24,16 +24,26 @@ You need it if you want to import Shapefiles into Postgres
 http://www.bostongis.com/pgsql2shp_shp2pgsql_quickguide.bqg        
 
 
-## OpenGeoSuite
-http://katiekowalsky.me/posts/2015/03/25/shapefile-importer.html
-https://connect.boundlessgeo.com/docs/suite/4.8/intro/whatis.html
+## ORM for Node
+http://docs.sequelizejs.com              
+Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.      
 
 
-## PostGIS in Action
+## Books, Guides
+
+### PostGIS in Action
 Book: https://www.manning.com/books/postgis-in-action-second-edition          
 Code is available here: http://www.postgis.us/chapters_edition_2       
 
-## Guide
+### Guide
 http://postgresguide.com/
+
+
+
+## Other
+
+### OpenGeoSuite 
+http://katiekowalsky.me/posts/2015/03/25/shapefile-importer.html
+https://connect.boundlessgeo.com/docs/suite/4.8/intro/whatis.html
 
 
