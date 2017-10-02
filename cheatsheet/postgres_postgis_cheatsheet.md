@@ -45,6 +45,9 @@ Code is available here: http://www.postgis.us/chapters_edition_2
 ### Guide
 http://postgresguide.com/
 
+## Troubleshooting
+https://confluence.atlassian.com/kb/postgres-troubleshooting-and-how-to-guides-779164471.html
+
 
 
 ## Other
