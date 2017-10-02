@@ -16,7 +16,7 @@ Important if you want to copy a csv file into your table
 copy ch01.restaurants_staging
  FROM '/data/restaurants.csv' DELIMITER as ',';
 ```
-
+     
 
 ## pgsql2shp (Command Line): Import shapefiles into a table
 You need it if you want to import Shapefiles into Postgres           
