@@ -31,6 +31,16 @@ shp2pgsql -s 4269:2163 -g geom
 PS: You don't need to create the table ch01.highways_staging beforehand. It will be created while importing the shapefile.
 
 
+## PostGIS SQL      
+### https://postgis.net/docs/reference.html       
+
+### Spatial Relationships and Measurements     
+https://postgis.net/docs/reference.html#Spatial_Relationships_Measurements      
+E.g. ST_DWithin or ST_Intersects                       
+              
+One thing that confuses new spatial database users is the parallels between the two terminologies. In general SQL lingua franca, you have UNION, INTERSECT, and EXCEPT, which talk about table rows. When you add space to the mix, you have parallel terminology for geometries: ST_Union (which is like a UNION), ST_Collect (which is like a UNION ALL), ST_Intersection (which is like INTERSECT), and ST_Difference (which is like EXCEPT) serve the same purposes for geometries.      
+
+
 ## ORM for Node
 http://docs.sequelizejs.com              
 Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.      
@@ -43,7 +53,7 @@ Book: https://www.manning.com/books/postgis-in-action-second-edition
 Code is available here: http://www.postgis.us/chapters_edition_2       
 
 ### Guide
-http://postgresguide.com/
+http://postgresguide.com
 
 ### Troubleshooting       
 https://confluence.atlassian.com/kb/postgres-troubleshooting-and-how-to-guides-779164471.html
@@ -52,8 +62,12 @@ https://confluence.atlassian.com/kb/postgres-troubleshooting-and-how-to-guides-7
 
 ## Other
 
+### DB Samples to play around         
+https://www.postgresql.org/ftp/projects/pgFoundry/dbsamples/              
+E.g. comes for example with ISO 3166-1 from 2006                  
+
 ### OpenGeoSuite 
-http://katiekowalsky.me/posts/2015/03/25/shapefile-importer.html
-https://connect.boundlessgeo.com/docs/suite/4.8/intro/whatis.html
+http://katiekowalsky.me/posts/2015/03/25/shapefile-importer.html            
+https://connect.boundlessgeo.com/docs/suite/4.8/intro/whatis.html              
 
 
