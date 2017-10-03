@@ -32,7 +32,8 @@ PS: You don't need to create the table ch01.highways_staging beforehand. It will
 
 
 ## PostGIS SQL      
-### https://postgis.net/docs/reference.html       
+### Overview
+https://postgis.net/docs/reference.html       
 
 ### Spatial Relationships and Measurements     
 https://postgis.net/docs/reference.html#Spatial_Relationships_Measurements      
