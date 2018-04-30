@@ -5,6 +5,7 @@ https://chrisalbon.com/#python
 
 ## Pandas
 
+
 ### Select rows and columns
 - https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/
 - https://pythonhow.com/accessing-dataframe-columns-rows-and-cells/
@@ -18,7 +19,8 @@ https://chrisalbon.com/#python
 - http://jonathansoma.com/lede/foundations/classes/pandas%20columns%20and%20functions/apply-a-function-to-every-row-in-a-pandas-dataframe/
 
 ### Misc
-https://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/
+- https://towardsdatascience.com/quick-dive-into-pandas-for-data-science-cc1c1a80d9c4
+- https://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/
 
 ## Numpy
 http://cs231n.github.io/python-numpy-tutorial/
