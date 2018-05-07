@@ -19,20 +19,20 @@ http://data8.org/datascience/tables.html
 - Group by columns: t.group([column, ...]) or t.group(column, function)
 - Pivot Table: t.pivot(cols, rows) or t.pivot(cols, rows, vals, function)
 
-### Joining Two Tables (inner join)
-t1.join('col_t1', 't2', 'col_t2')    
-PS: Compare to R: merge(table1, table2, x=col1, y=col2)
+### Joining Two Tables (inner join)      
+t1.join('col_t1', 't2', 'col_t2')       
+PS: Compare to R: merge(table1, table2, x=col1, y=col2)     
 
 
 ### Randomness
 https://www.inferentialthinking.com/chapters/09/randomness.html
 
-two_groups = make_array('treatment', 'control')
-np.random.choice(two_groups, 10)
+two_groups = make_array('treatment', 'control')     
+np.random.choice(two_groups, 10)    
 
-tosses = make_array('Tails', 'Heads', 'Tails', 'Heads', 'Heads')
-tosses == 'Heads' # array([False,  True, False,  True,  True], dtype=bool)
-np.count_nonzero(tosses == 'Heads') # 3
+tosses = make_array('Tails', 'Heads', 'Tails', 'Heads', 'Heads')     
+tosses == 'Heads' # array([False,  True, False,  True,  True], dtype=bool)      
+np.count_nonzero(tosses == 'Heads') # 3     
 
 
 ## Pandas
