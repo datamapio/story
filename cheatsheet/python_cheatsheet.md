@@ -57,13 +57,49 @@ np.count_nonzero(tosses == 'Heads') # 3
 ## Numpy
 http://cs231n.github.io/python-numpy-tutorial/
 
+
+## The Regression Line
+https://www.inferentialthinking.com/chapters/15/2/Regression_Line           
+         
+estimate of y = r⋅x   when both variables are measured in standard units        
+            
+estimate of y = slope * x + intercept              
+slope = r * SD of y / SD of x                
+intercept = average of y - slope * average of x          
+       
+```
+def standard_units(x):
+    return (x - np.average(x))/np.std(x)
+
+def correlation(t, x, y):
+    x_su = standard_units(t.column(x))
+    y_su = standard_units(t.column(y))
+    return np.average(x_su * y_su)
+
+def slope(t, x, y):
+    r = correlation(t, x, y)
+    return r * np.std(t.column(y))/np.std(t.column(x))
+
+def intercept(t, x, y):
+    a = slope(t, x, y)
+    return np.average(t.column(y)) - a*np.average(t.column(x))
+
+def fitted_values(t, x, y):
+    a = slope(t, x, y)
+    b = intercept(t, x, y)
+    return a * t.column(x) + b
+
+```
+
+
+
 ### Random Forests
 https://codewords.recurse.com/issues/seven/a-tour-of-random-forests 
 https://www.datascience.com/resources/notebooks/random-forest-intro
 https://www.inertia7.com/projects/95
 https://chrisalbon.com/machine_learning/trees_and_forests/random_forest_classifier_example/            
-Video: [Nathan Epstein - Using Random Forests in Python](https://www.youtube.com/watch?v=6O4kASc-SDE) 
-Video: [Gabby Shklovsky: Random Forests Best Practices for the Business World](https://www.youtube.com/watch?v=E7VLE-U07x0)     
+Video: [Nathan Epstein - Using Random Forests in Python](https://www.youtube.com/watch?v=6O4kASc-SDE)        
+Video: [Gabby Shklovsky: Random Forests Best Practices for the Business World](https://www.youtube.com/watch?v=E7VLE-U07x0)        
 
 
 ### Machine Learning
