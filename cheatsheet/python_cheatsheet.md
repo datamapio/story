@@ -89,7 +89,25 @@ def fitted_values(t, x, y):
     b = intercept(t, x, y)
     return a * t.column(x) + b
 
+def residuals(t, x, y):
+    return t.column(y) - fitted_values(t, x, y)
+
+def plot_fitted(t, x, y):
+    tbl = t.select(x, y)
+    tbl.with_columns("Fitted values", fitted_values(t, x, y)).scatter(0)
+
+
+def mse(any_slope, any_intercept):
+    x = tbl.column(0)
+    y = tbl.column(1)
+    fitted = any_slope*x + any_intercept
+    return np.mean((y - fitted) ** 2)
+
+best = minimize(mse)
+
+
 ```
+See also: http://data8.org/fa16/assets/final_reference_sheet.pdf
 
 
 
