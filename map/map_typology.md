@@ -1,6 +1,6 @@
-#MAP TYPOLOGY
+# MAP TYPOLOGY
 
-##One Map: Map only
+## One Map: Map only
 Map Layers:
 - Area Units Shapes (e.g. States in a Country)
 - Smaller Area Units (e.g. Counties in a State)
@@ -11,54 +11,54 @@ Map Layers:
 - Water (Rivers, Lakes etc.)
 
 
-###Simple Map (mostly meant for orientation)
+### Simple Map (mostly meant for orientation)
 Simple Maps with Administrative Units and main points as location
 
 
-##One Map: Datamaps
+## One Map: Datamaps
 These maps are meant to show data
 
-###Simple Maps showing data 
-####Maps with Population Rings
+### Simple Maps showing data 
+#### Maps with Population Rings
 
-####Maps with Bar Charts
+#### Maps with Bar Charts
 
-####Maps with Pie Charts 
+#### Maps with Pie Charts 
 
 
-###Choropleth
+### Choropleth
 Choropleth Maps map data to a color. Area units are then colored according to the data value.
 
-###Cartogram
+### Cartogram
 
-###Dot Distribution Map
+### Dot Distribution Map
 
-###Proportional Symbol Map
+### Proportional Symbol Map
 
-###Contour/Isopleth/Isarithmic Map
+### Contour/Isopleth/Isarithmic Map
 
-###Dasymetric Map
+### Dasymetric Map
 
 
-###Hexbin Maps
+### Hexbin Maps
 
-###Raster Maps
+### Raster Maps
 e.g. https://www.stadt-zuerich.ch/content/dam/stzh/prd/Deutsch/Statistik/Aktuell/Veranstaltungen/ST12_Praes_2006_11.pdf
 
 
-##Overview and Detail Map
+## Overview and Detail Map
 Mostly simple maps with the location in the world and then inside the country or country and region.
 The overview helps to locate the place.
 
-##Small Multiples
+## Small Multiples
 E.g. Repeating Choropleth Maps to show different related datasets (e.g. candidates in New Hampshire)
 
-##Maps in combination
-###Maps and Tables
+## Maps in combination
+### Maps and Tables
 
-###Maps and Line Graphs
+### Maps and Line Graphs
 
-##Timeseries Maps
+## Timeseries Maps
 
 
 
