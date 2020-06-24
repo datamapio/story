@@ -1,9 +1,9 @@
-#EVENTS
+# EVENTS
 
-##Upcoming
+## Upcoming
 d3 Oakland Meetup, April 12, 2016
 
-##GEO/MAPPING
+## GEO/MAPPING
 
 NACIS2016             
 Colorado Springs, CO           
@@ -16,7 +16,7 @@ San Francisco, CA
 http://aagmapathon.org/   
 
 
-##DATAVIZ
+## DATAVIZ
 
 **GOING**
 OpenViz Conference, April, 25-26       
@@ -32,7 +32,7 @@ https://theinnovationenterprise.com/summits/data-visualization-summit-boston-201
 
 
 
-##DATA JOURNALISM 
+## DATA JOURNALISM 
 
 Computation & Journalism
 Sept 30- October 1st, 2016
