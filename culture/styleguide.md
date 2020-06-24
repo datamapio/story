@@ -1,28 +1,28 @@
-#Style Guide
+# Style Guide
 
-##Naming
-###Map Files
+## Naming
+### Map Files
 
-###Data Files
+### Data Files
 REF      
 EXT       
 DATA       
 
-###Inside the Data Visualization
+### Inside the Data Visualization
 
-###REF variables
+### REF variables
 
-###EXT variables
+### EXT variables
 
 
-##Other Styleguides
+## Other Styleguides
 http://google.github.io/styleguide/javascriptguide.xml
 
-##Links inside the index.html
+## Links inside the index.html
 
 Discussion:
 Each external call is dangerous (the site could be unresponsive at any time) and slows down the visualization. 
-###Rules
+### Rules
 1. Reduce links as much as possible
 2. Reduce dependency to outside links to the strictest minimum. Outside links need to get approval.
    e.g. fonts => https://m.signalvnoise.com/control-your-type-google-fonts-chrome-trouble-c21e1a106436#.e9ool3knk
